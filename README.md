@@ -1,45 +1,147 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Site Title
+## Table of contents
 
-Welcome USER_NAME,
+<!--table start-->
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+- [UX](#UX)
+    - [User Stories](#User-Stories)
+    - [Strategy Plane](#Strategy-plane)
+    - [Scope Plane](#Scope-Plane)
+    - [Structure Plane](#Structure-Plane)
+    - [Skeleton Plane](#Skeleton-Plane)
+    - [Surface Plane](#Surface-Plane)
+- [Features](#Features)
+    - [Existing Features](#Existing-Features)
+    - [Features Left to Implement](#Features-Left-to-Implement) 
+- [Technologies Used](#Technologies-Used)
+    - [Languages](#Languages)
+    - [Tools](#Tools)
+    - [Frameworks](#Frameworks)
+    - [Libraries](#Libraries)
+- [Testing](#Testing)
+- [Deployment](#Deployment)
+    - [Online Deployment](#Online-deployment)
+    - [Offline Deployment](#Offline/Local-Deployment)
+- [Credits](#Credits)
+    -[Content](#Content)
+    -[Media](#Media)
+    -[Acknowledgements](#Acknowledgements)
+<!--table end-->
 
-## Gitpod Reminders
+![Mock-up](Readme_sourceFiles/mockup.png)
+---
+ 
+# UX
+## User Stories
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Strategy Plane
+### High level considerations
 
-`python3 -m http.server`
+### Business goals 
 
-A blue button should appear to click: *Make Public*,
+### Trade Off 
 
-Another blue button should appear to click: *Open Browser*.
+![The Features diagram](Readme_sourceFiles/tradeOff.png)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: *Make Public*,
+### The trade off
 
-Another blue button should appear to click: *Open Browser*.
+## Scope Plane
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Trade off
 
-## Updates Since The Instructional Video
+#### Comments
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+#### Promotion of products
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Requirements
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Requirement types
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Structure Plane
+### Concerns
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+![Structure plane](Readme_sourceFiles/Structure_plane.png)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Interaction design 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Information Architecture
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Principals of organisation
 
---------
+## Skeleton Plane
 
-Happy coding!
+- [Desktop view](Readme_sourceFiles/DesktopWireframe.pdf)
+
+- [Mobile & Tablet view](Readme_sourceFiles/MobileAndTabletView.pdf)
+
+## Surface Plane
+
+![Colour pallet for the site](Readme_sourceFiles/pallet.png)
+
+# Features
+ 
+## Existing Features
+
+## Features Left to Implement
+
+# Technologies Used
+
+## Languages
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Pyhton3](https://www.python.org/downloads/release/python-380/)
+
+### Tools
+
+- [Autoprefixer](https://autoprefixer.github.io/)
+- [Markup Validation service](https://validator.w3.org/)
+- [Pep8 online check](http://pep8online.com/)
+- [GitHub](https://github.com/)
+- [Git](https://git-scm.com/)
+- [Gitpod](https://chrome.google.com/webstore/detail/gitpod-online-ide/dodmmooeoklaejobgleioelladacbeki?hl=en)
+- [VSC](https://code.visualstudio.com/download)
+- [Microsoft Office](https://www.office.com/)
+- [favicon](https://www.favicon.cc/)
+- [JSHint](https://jshint.com/)
+
+
+### Frameworks
+
+- [Bootstrap](https://getbootstrap.com/)
+- [Font Awesome icons](https://fontawesome.com/icons?d=gallery)
+- [Django](https://www.djangoproject.com/)
+
+The following are frameworks imported from the cheese shop (They can be found in requirements.txt). 
+- [Click](https://pypi.org/project/click/)
+- [DNSPython](https://pypi.org/project/dnspython/)
+- [itsdangerous](https://pypi.org/project/itsdangerous/)
+- [Werkzeug](https://pypi.org/project/Werkzeug/)
+
+### Libraries
+
+- [JQuery](https://jquery.com)
+
+# Testing
+
+Due to this section being too long, I have written [automatic tests](automatic_testing.md).
+I have used Gitpod for all my tests. 
+
+# Deployment
+
+Link to the live page: 
+## Online deployment
+
+## Offline/Local Deployment
+
+# Credits
+
+## Content
+
+## Media
+
+
+## Acknowledgements
+- [Boutique Ado](https://github.com/KeisGSmit/OnlineShop)
