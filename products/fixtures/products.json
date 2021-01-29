@@ -172,13 +172,10 @@
     "model": "products.product",
     "fields": {
       "sku": "pp5002990740",
-      "name": "Stafford 4-pk. Heavyweight Crewneck T-ShirtsBig & Tall",
-      "description": "Soft and comfortable, two of his favorite things together in this heavyweight cotton tee from Stafford.  combed cotton heavier fabric for durability preshunk for lasting fit premium seaming reduces twisting tag free cotton washable imported",
-      "price": 48.99,
-      "category": 5,
-      "rating": 4.8,
-      "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1029201317111469M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-      "image": "DP1029201317111469M.jpg"
+      "name": "Gym Chalk",
+      "description": "Gym Chalk provides extra grip when lifting weights",
+      "price": 80.99,
+      "image": "chalk-box-8pieces-1-600x600.jpg"
     }
   },
   {
@@ -522,13 +519,11 @@
     "model": "products.product",
     "fields": {
       "sku": "pp5004111503",
-      "name": "The Foundry Supply Co. Quick-Dri PoloBig & Tall",
-      "description": "Moisture-wicking polo is rich in Pima cotton for a luxuriously soft shirt that keeps you cool and dry.  Quick-Dri moisture-wicking fabric flat knit collar 3-button placket tennis tail with taped side vents cotton/polyester washable imported",
+      "name": "Gym Gloves",
+      "description": "Gym Gloves are essential to prevent sores on your hands from lifting heavy weights.",
       "price": 60.99,
       "category": 5,
-      "rating": 4.9,
-      "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0421201520311379C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-      "image": "DP0421201520311379C.jpg"
+      "image": "887791196637-1-pdpxl.jpg"
     }
   },
   {
