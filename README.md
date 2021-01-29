@@ -85,6 +85,8 @@
 
 ## Features Left to Implement
 
+- I would like to make the mobile nav a bit more user friendly for mobile users but due to the number of icons and bootstrap, this will take a lot of time.
+
 # Technologies Used
 
 ## Languages
