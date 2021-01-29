@@ -141,9 +141,15 @@ Link to the live page:
 # Credits
 
 ## Content
+- [Gym Equipment JSON content](https://www.fitandme.com/guide-gym-equipment-names-how-to-use/#tab-con-18)
+- [simplifaster](https://simplifaster.com/articles/curved-treadmills-pros-cons/)
+- [Flat treadmill](https://www.amazon.com/TOE-Treadmill-Installation-Absorption-Apartment/dp/B08LQPPL5X/ref=sr_1_3?dchild=1&keywords=Small+Treadmill+for+Apartment&qid=1611918688&sr=8-3)
 
 ## Media
 
+- [Unsplash](https://unsplash.com/)
+- [kaggle](https://www.kaggle.com/dutt2302/gym-equipment?select=gym_data)
+- [Json Media](https://www.fitandme.com/guide-gym-equipment-names-how-to-use/#tab-con-18)
 
 ## Acknowledgements
 - [Boutique Ado](https://github.com/KeisGSmit/OnlineShop)
