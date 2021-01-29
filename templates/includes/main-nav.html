@@ -5,8 +5,8 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">By Name</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=name;direction=asc" class="dropdown-item">By Name</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -15,9 +15,9 @@
                 Equipment
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="equipment-link">
-                <a href="" class="dropdown-item">Free Weights</a>
-                <a href="" class="dropdown-item">Cardio</a>
-                <a href="" class="dropdown-item">Resistance</a>
+                <a href="{% url 'products' %}?category=freeweights" class="dropdown-item">Free Weights</a>
+                <a href="{% url 'products' %}?category=cardio" class="dropdown-item">Cardio</a>
+                <a href="{% url 'products' %}?category=resistance" class="dropdown-item">Resistance</a>
             </div>
         </li>
 
@@ -26,10 +26,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
