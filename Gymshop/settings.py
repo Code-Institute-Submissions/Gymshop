@@ -73,6 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request', # 'allauth' needs this from django
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'bag.contexts.bag_contents',
             ],
         },
     },
@@ -153,3 +154,5 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+STANDARD_DELIVERY_PERCENTAGE = 10
