@@ -85,13 +85,33 @@ a.category-badge > span.badge:hover {
     right: 10px;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
 }
 
 .display-image{
     height: 250px;
     width: auto;
+}
+
+.indv-display-image{
+    height:500px;
+    width:auto;
 }
 /* -------------------------------- Media Queries */
 
