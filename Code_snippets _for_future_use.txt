@@ -1,0 +1,12 @@
+#overlay-bag-background{
+    height: 100%;
+	width: 100%;
+	top: 0;
+    left: 0;
+    background: url(/media/bag_background.jfif) no-repeat center center fixed;
+    background-size: cover;
+	position: fixed;
+	z-index: -1;
+}
+
+id="overlay-bag-background"
