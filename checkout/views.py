@@ -11,6 +11,7 @@ def checkout(request, item_id):
         messages.error(request, "No items in your bag")
         return redirect(reverse('products'))
 
+    print(bag)
     order_form = OrderForm()
     template = '/checkout/checkout.html'
     context = {
