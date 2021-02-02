@@ -15,7 +15,7 @@ def checkout(request):
     for item, value in bag.items():
         items = get_object_or_404(Product, pk=item)
         quantity = value
-        if items.stock - quantity <= 0:
+        if items.stock - quantity < 0:
             messages.error(request,f'Stock for {items.name} changed since you last added items to your bag. We only have {items.stock} left')
             return redirect('view_bag')
 
