@@ -2,6 +2,7 @@ from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Product
 from .forms import OrderForm
+from bag.views import view_bag
 # Create your views here.
 
 
@@ -11,14 +12,13 @@ def checkout(request):
         messages.error(request, "No items in your bag")
         return redirect(reverse('products'))
 
-    for item, value in bag:
+    for item, value in bag.items():
         items = get_object_or_404(Product, pk=item)
         quantity = value
         if items.stock - quantity <= 0:
-            messages.error("Stock has changed since you last added items to your bag")
-            return render(request, 'bag/bag.html')
+            messages.error(request,f'Stock for {items.name} changed since you last added items to your bag. We only have {items.stock} left')
+            return redirect('view_bag')
 
-    print(bag)
     order_form = OrderForm()
     template = 'checkout/checkout.html'
     context = {

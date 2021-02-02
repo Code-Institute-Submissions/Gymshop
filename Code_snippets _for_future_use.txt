@@ -10,3 +10,12 @@
 }
 
 id="overlay-bag-background"
+
+for item, value in bag.items():
+        items = get_object_or_404(Product, pk=item)
+        quantity = value
+        new_stock = items.stock - quantity
+        print(new_stock)
+        items.stock = new_stock
+        print(items.stock)
+        items.save()
