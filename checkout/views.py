@@ -15,10 +15,18 @@ def checkout(request):
         messages.error(request, "No items in your bag")
         return redirect(reverse('products'))
 
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
+    stripe_secret_key = settings.STRIPE_SECRET_KEY
+    stripe.api_key = stripe_secret_key
+
     current_bag = bag_contents(request)
     total = current_bag['grand_total']
     stripe_total = round(total * 100)
 
+    intent = stripe.PaymentIntent.create(
+        amount=stripe_total,
+        currency=settings.STRIPE_CURRENCY,
+    )
 
     for item, value in bag.items():
         items = get_object_or_404(Product, pk=item)
@@ -28,10 +36,14 @@ def checkout(request):
             return redirect('view_bag')
 
     order_form = OrderForm()
+
+    if not stripe_public_key:
+        messages.warning(request, "Stripe public key not set.")
+
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
-        'stripe_public_key': 'pk_test_51IAvHVECTsEQEyp4uaa1Ygz9AQGg1As3mODsvFGRNI9RLcpPTPLv58rxFfRK1j831KYRBlETVze7VMlFI7qo2eIY00An40UxNo',
-        'client_secret': 'test client secret'
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret
     }
     return render(request, template, context)
