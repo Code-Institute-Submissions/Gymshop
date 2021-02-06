@@ -35,3 +35,13 @@
     color:#000;
     border: 1px solid #000;
 }
+#overlay-background2{
+    height: 100%;
+	width: 100%;
+	top: 0;
+    left: 0;
+    background: url(/media/bag_background.jfif) no-repeat center center fixed;
+    background-size: cover;
+	position: fixed;
+	z-index: -1;
+}
