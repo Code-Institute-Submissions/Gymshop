@@ -87,8 +87,8 @@ def add_product(request):
 
             if new_quantity > 0 and price > 0:
                 messages.success(request, 'Successfully added product!')
-                form.save()
-                return redirect(reverse('add_product'))
+                product = form.save()
+                return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
@@ -135,3 +135,11 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
+
+def delete_product(request, product_id):
+    """" Deletes a Product """
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, "Product deleted")
+    return redirect(reverse('products'))
