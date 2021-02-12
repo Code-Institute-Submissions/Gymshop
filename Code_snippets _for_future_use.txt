@@ -35,3 +35,25 @@ ____________________________________________________________________
     else:
         final_quantity = old_quantity + new_quantity
         item.stock = final_quantity
+
+_______________________________________________________________________
+
+    old_quantity = product.stock
+    price = float(request.POST.get('price'))
+    new_quantity = int(request.POST.get('stock'))
+
+        if form.is_valid():
+
+            if new_quantity < 0:
+                messages.warning(request, 'You have a negative stock - double check that')
+
+            if price <= 0:
+                messages.warning(request, 'You have a invalid price - double check that')
+
+            if new_quantity > 0 and price > 0:
+                updated_stock = old_quantity + new_quantity
+                product.stock = updated_stock
+                product.save()
+                form.save()
+                messages.success(request, 'Successfully updated product!')
+                return redirect(reverse('product_detail', args=[product.id]))

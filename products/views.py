@@ -85,7 +85,7 @@ def add_product(request):
             if price <= 0:
                 messages.warning(request, 'You have a negative price - double check that')
 
-            if new_quantity >= 1 and price >= 0:
+            if new_quantity > 0 and price > 0:
                 messages.success(request, 'Successfully added product!')
                 form.save()
                 return redirect(reverse('add_product'))
@@ -96,6 +96,42 @@ def add_product(request):
     template = 'products/add_product.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_product(request, product_id):
+    """ Edit a product in the store """
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        price = float(request.POST.get('price'))
+        new_quantity = int(request.POST.get('stock'))
+        if form.is_valid():
+
+            if price <= 0:
+                messages.warning(request, 'Your Price is invalid')
+
+            if new_quantity <= 0:
+                messages.warning(request, 'Your Stock is invalid')
+
+            if new_quantity > 0 and price > 0:
+                form.save()
+                messages.success(request, 'Successfully updated product!')
+                return redirect(reverse('product_detail', args=[product.id]))
+
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'You are editing {product.name}')
+
+    template = 'products/edit_product.html'
+    context = {
+        'form': form,
+        'product': product,
     }
 
     return render(request, template, context)
