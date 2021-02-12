@@ -28,10 +28,10 @@ ____________________________________________________________________
 
     if price <= 0:
         messages.warning(request, 'You have a negative price - double check that')
-        return #keeps user on the page
+        return redirect(reverse('add_product'))
     if new_quantity <= 0:
         messages.warning(request, 'You have a negative stock - double check that')
-        return #keeps user on the page
+        return redirect(reverse('add_product'))
     else:
         final_quantity = old_quantity + new_quantity
         item.stock = final_quantity

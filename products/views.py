@@ -73,7 +73,26 @@ def product_detail(request, product_id):
 
 def add_product(request):
     """ Add a product to the store """
-    form = ProductForm()
+    if request.method == 'POST':
+        price = float(request.POST.get('price'))
+        new_quantity = int(request.POST.get('stock'))
+        form = ProductForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            if new_quantity <= 0:
+                messages.warning(request, 'You have a negative stock - double check that')
+
+            if price <= 0:
+                messages.warning(request, 'You have a negative price - double check that')
+
+            if new_quantity >= 1 and price >= 0:
+                messages.success(request, 'Successfully added product!')
+                form.save()
+                return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+    else:
+        form = ProductForm()
     template = 'products/add_product.html'
     context = {
         'form': form,
