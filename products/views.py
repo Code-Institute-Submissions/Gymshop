@@ -93,8 +93,8 @@ def add_product(request):
 
             if new_quantity > 0 and price > 0:
                 messages.success(request, 'Successfully added product!')
-                form.save()
-                return redirect(reverse('add_product'))
+                product = form.save()
+                return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
