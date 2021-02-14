@@ -39,7 +39,7 @@
             <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
         {% endif %}
     </div>
-</li>
+{% if request.user.is_authenticated %}
 <li class="list-inline-item">
         <a href="{% url 'wishlist' %}" class="text-black nav-link d-block d-lg-none"> 
         <div class="text-center mobile-icons">
@@ -48,6 +48,7 @@
         </div> 
     </a>
 </li>
+{% endif %}
 <li class="list-inline-item">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
         <div class="text-center mobile-icons">
