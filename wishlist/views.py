@@ -25,6 +25,20 @@ def wishlist(request):
 
 
 def add_to_wishlist(request, product_id):
+    profile = get_object_or_404(UserProfile, user=request.user)
+    print(profile)
+    wishlist = get_object_or_404(Wishlist, user=profile)
+    print(wishlist)
+    wishlist_item = get_list_or_404(WishlistItem, wishlist=wishlist)
+    print(wishlist_item)
+    print(type(wishlist_item))
 
+    redirect_url = request.POST.get('redirect_url')
 
-    return render(request, redirect_url)
+    product_added_item = get_object_or_404(Product, pk=product_id)
+    wishlist_item.append(product_added_item)
+    print(wishlist_item)
+    wishlist.wishlist_item = wishlist_item
+
+    return redirect(redirect_url)
+
