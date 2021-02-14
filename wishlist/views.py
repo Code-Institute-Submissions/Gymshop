@@ -9,17 +9,11 @@ from django.contrib import messages
 
 def wishlist(request):
     """ A view to return the shopping bag """
-    wishlist = get_list_or_404(Wishlist, user=request.user)
-    wishlist_items = {}
-    for items in wishlist.wished_item:
-        wishlist_items.append(items)
-    context = {
-        'wishlist': wishlist_items
-    }
+
     return render(request, 'wishlist/wishlist.html', context)
 
 
 def add_to_wishlist(request, product_id):
-    
+
 
     return render(request, redirect_url)
