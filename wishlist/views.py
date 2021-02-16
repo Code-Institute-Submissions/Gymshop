@@ -12,12 +12,28 @@ from django.contrib import messages
 @login_required
 def wishlist(request):
     """ A view to return the Wishlist """
+    items = []
     user = get_object_or_404(UserProfile, user=request.user)
     wishlist = Wishlist.objects.get_or_create(user=user)
+    wishlist_user = wishlist[0]
+    test = WishlistItem.objects.filter(wishlist=wishlist_user).exists()
 
-    products = WishlistItems.objects.all(wishlist=user)
+    if test:
+        user_wishlist = get_list_or_404(WishlistItem, wishlist=wishlist_user)
+        for obj in user_wishlist:
+            product = get_object_or_404(Product, name=obj)
+            items.append(product)
+        context = {
+            'wishlist': True,
+            'products': items
+        }
+        return render(request, 'wishlist/wishlist.html', context)
 
-    return render(request, 'wishlist/wishlist.html')
+    else:
+        context = {
+            'wishlist': False,
+        }
+        return render(request, 'wishlist/wishlist.html', context)
 
 
 @login_required
@@ -30,12 +46,10 @@ def add_to_wishlist(request, product_id):
     wishlist_user = wishlist[0]
 
     product = Product.objects.get(pk=product_id)
+    variable = WishlistItem(wishlist=wishlist_user, product=product, date_added=timezone.now())
+    variable.save()
 
-    if WishlistItem.objects.get(wishlist=wishlist_user, product=product):
-        messages.error(request, "Product is already in wishlist")
-    else:
-        variable = WishlistItem(wishlist=wishlist_user, product=product, date_added=timezone.now())
-        variable.save()
+    # check for duplicates -?
 
     return redirect(redirect_url)
 
