@@ -2,43 +2,45 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, get_list_o
 
 from .models import Product, UserProfile, Wishlist, WishlistItem
 
+from django.contrib.auth.decorators import login_required
+
+from django.utils import timezone
+
 from django.contrib import messages
 
-# Create your views here.
 
-
+@login_required
 def wishlist(request):
-    """ A view to return the shopping bag """
-    items = []
-    profile = get_object_or_404(UserProfile, user=request.user)
-    wishlist = get_object_or_404(Wishlist, user=profile)
-    wishlist_item = get_list_or_404(WishlistItem, wishlist=wishlist)
-    for product in wishlist_item:
-        products = get_object_or_404(Product, pk=product.id)
-        items.append(products)
+    """ A view to return the Wishlist """
+    user = get_object_or_404(UserProfile, user=request.user)
+    wishlist = Wishlist.objects.get_or_create(user=user)
 
-    context = {
-        'wishlist': bool(wishlist),
-        'products': items,
-    }
-    return render(request, 'wishlist/wishlist.html', context)
+    products = WishlistItems.objects.all(wishlist=user)
+
+    return render(request, 'wishlist/wishlist.html')
 
 
+@login_required
 def add_to_wishlist(request, product_id):
-    profile = get_object_or_404(UserProfile, user=request.user)
-    print(profile)
-    wishlist = get_object_or_404(Wishlist, user=profile)
-    print(wishlist)
-    wishlist_item = get_list_or_404(WishlistItem, wishlist=wishlist)
-    print(wishlist_item)
-    print(type(wishlist_item))
-
+    """ A view to delete a item in the Wishlist """
     redirect_url = request.POST.get('redirect_url')
 
-    product_added_item = get_object_or_404(Product, pk=product_id)
-    wishlist_item.append(product_added_item)
-    print(wishlist_item)
-    wishlist.wishlist_item = wishlist_item
+    user = get_object_or_404(UserProfile, user=request.user)
+    wishlist = Wishlist.objects.get_or_create(user=user)
+    wishlist_user = wishlist[0]
+
+    product = Product.objects.get(pk=product_id)
+
+    if WishlistItem.objects.get(wishlist=wishlist_user, product=product):
+        messages.error(request, "Product is already in wishlist")
+    else:
+        variable = WishlistItem(wishlist=wishlist_user, product=product, date_added=timezone.now())
+        variable.save()
 
     return redirect(redirect_url)
 
+
+# @login_required
+# def delete_from_wishlist(request, product_id):
+#     redirect_url = request.POST.get('redirect_url')
+#     return redirect(redirect_url)
