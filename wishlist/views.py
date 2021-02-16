@@ -65,5 +65,21 @@ def delete_from_wishlist(request, product_id):
     user = get_object_or_404(UserProfile, user=request.user)
     wishlist = Wishlist.objects.get_or_create(user=user)
     wishlist_user = wishlist[0]
+    if request.POST:
+        product = Product.objects.get(pk=product_id)
 
-    return redirect(redirect_url)
+        # look for product in the user's wishlistItem - returns true if it exists
+        test = WishlistItem.objects.filter(product=product).exists()
+
+        if test:
+            product = WishlistItem.objects.get(product=product)
+            product.delete()
+            messages.success(request, "Product removed from wishlist")
+            return redirect(redirect_url)
+
+        if test is None:
+            messages.error(request, "You can not delete a item that is not in your wishlist")
+            return redirect(redirect_url)
+    else:
+        messages.error(request, 'Item can only be deleted from wishlist')
+        return render(request, 'home/index.html')
