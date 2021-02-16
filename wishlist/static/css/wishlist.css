@@ -3,9 +3,9 @@
     color: black;
 }
 
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.btn-red:hover,
+.btn-red:active,
+.btn-red:focus {
     background: rgb(136, 0, 0);
     color: rgb(85, 85, 85)48, 137, 137);
 }
