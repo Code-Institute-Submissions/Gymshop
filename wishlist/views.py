@@ -46,15 +46,24 @@ def add_to_wishlist(request, product_id):
     wishlist_user = wishlist[0]
 
     product = Product.objects.get(pk=product_id)
-    variable = WishlistItem(wishlist=wishlist_user, product=product, date_added=timezone.now())
-    variable.save()
+    if request.POST:
+        test = WishlistItem.objects.filter(wishlist=wishlist_user, product=product).exists()
+        if test:
+            messages.error(request, "Product already in your wishlist")
+            return redirect(redirect_url)
 
-    # check for duplicates -?
+        else:
+            variable = WishlistItem(wishlist=wishlist_user, product=product, date_added=timezone.now())
+            variable.save()
+            messages.success(request, "Product added to your wishlist")
+            return redirect(redirect_url)
+
+@login_required
+def delete_from_wishlist(request, product_id):
+    redirect_url = request.POST.get('redirect_url')
+
+    user = get_object_or_404(UserProfile, user=request.user)
+    wishlist = Wishlist.objects.get_or_create(user=user)
+    wishlist_user = wishlist[0]
 
     return redirect(redirect_url)
-
-
-# @login_required
-# def delete_from_wishlist(request, product_id):
-#     redirect_url = request.POST.get('redirect_url')
-#     return redirect(redirect_url)
