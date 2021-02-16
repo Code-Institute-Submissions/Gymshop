@@ -57,6 +57,10 @@ def add_to_wishlist(request, product_id):
             variable.save()
             messages.success(request, "Product added to your wishlist")
             return redirect(redirect_url)
+    else:
+        messages.error(request, "Click 'Add to wishlist' to add a item ")
+        return render(request, 'home/index.html')
+
 
 @login_required
 def delete_from_wishlist(request, product_id):
@@ -81,5 +85,5 @@ def delete_from_wishlist(request, product_id):
             messages.error(request, "You can not delete a item that is not in your wishlist")
             return redirect(redirect_url)
     else:
-        messages.error(request, 'Item can only be deleted from wishlist')
+        messages.error(request, 'Item can only be deleted wishlist')
         return render(request, 'home/index.html')
