@@ -6,6 +6,7 @@ from django.db.models.functions import Lower
 
 from .models import Product, Category
 from .forms import ProductForm
+from comments.forms import CommentForm
 
 # Create your views here.
 
@@ -67,6 +68,7 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
+        'form': CommentForm()
     }
 
     return render(request, 'products/product_detail.html', context)

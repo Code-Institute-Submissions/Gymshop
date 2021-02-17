@@ -99,12 +99,22 @@
             </div>
         </div>
     </div>
-    <!--
+  
+     
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
+                {% for comment in product_comment %}
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ comment.user }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ comment.date }}</h6>
+                        <p class="card-text">{{ comment.statement }}</p>
+                    </div>
+                </div>
+                {% endfor %}
                 {% if request.user.is_authenticated %}
-                <form method="POST" action="{% url 'add_comment' %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
                         {{ field }}
@@ -115,19 +125,10 @@
                     </div>
                 </form>
                 {% endif %}
-                {& for comment in product_comment &}
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ comment.user }}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">{{ comment.date }}</h6>
-                        <p class="card-text">{{ comment.statement }}</p>
-                    </div>
-                </div>
-                {% endfor %}
             </div>
         </div>
     </div>
-    -->
+
 
 {% endblock %}
 
