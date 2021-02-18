@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/comments.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -101,27 +105,32 @@
     </div>
   
      
-    <div class="container-fluid">
+    <div class="container mx-auto">
         <div class="row">
             <div class="col-12">
-                {% for comment in product_comment %}
+                <!-- for comment in product_comment-->
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">{{ comment.user }}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">{{ comment.date }}</h6>
-                        <p class="card-text">{{ comment.statement }}</p>
+                        <h5 class="card-title">User</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">date</h6>
+                        <p class="card-text">statement</p>
                     </div>
                 </div>
-                {% endfor %}
+                <hr>
+                <!--endfor -->
                 {% if request.user.is_authenticated %}
-                <form method="POST" action="" class="form mb-2" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {% for field in form %}
-                        {{ field }}
-                    {% endfor %}
-                    <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Comment</button>
+                <form method="POST" action="" class="form mb-2 mt-4" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col">
+                            {% csrf_token %}
+                            {% for field in form %}
+                                {{ field | as_crispy_field }}
+                            {% endfor %}
+                            <div class="">
+                                <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
+                                <button class="btn btn-black rounded-0" type="submit">Comment</button>
+                            </div>
+                        </div>
                     </div>
                 </form>
                 {% endif %}
