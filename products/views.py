@@ -1,10 +1,11 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, get_list_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category
+from comments.models import UserComments
 from .forms import ProductForm
 from comments.forms import CommentForm
 
@@ -63,12 +64,27 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """ A view to show individual product details """
-
+    comments = []
     product = get_object_or_404(Product, pk=product_id)
+
+    product_comment = UserComments.objects.filter(product=product).exists()
+
+    if product_comment:
+        products_comment = get_list_or_404(UserComments,product=product)
+
+        for item in products_comment:
+            user = item.user
+            comment = item.comment
+            card = {
+                'user': user,
+                'comment': comment
+            }
+            comments.append(card)
 
     context = {
         'product': product,
-        'form': CommentForm()
+        'form': CommentForm(),
+        'product_comment': comments
     }
 
     return render(request, 'products/product_detail.html', context)

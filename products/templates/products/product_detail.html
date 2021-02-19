@@ -108,16 +108,15 @@
     <div class="container mx-auto">
         <div class="row">
             <div class="col-12">
-                <!-- for comment in product_comment-->
+                {% for comment in product_comment %}
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">User</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">date</h6>
-                        <p class="card-text">statement</p>
+                        <h5 class="card-title"> {{ comment.user }}</h5>
+                        <p class="card-text">{{ comment.comment }}</p>
                     </div>
                 </div>
                 <hr>
-                <!--endfor -->
+                {% endfor %}
                 {% if request.user.is_authenticated %}
                 <form method="POST" action="{% url 'add_comment' product.id %}" class="form mb-2 mt-4" enctype="multipart/form-data">
                     <div class="row">
