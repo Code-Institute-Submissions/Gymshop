@@ -32,7 +32,24 @@ def add_comment(request, product_id):
         messages.error(request, "Something went wrong try again")
         return render(request, 'home/index.html')
 
-
+@login_required
 def remove_comment(request, product_id):
     redirect_url = request.POST.get('redirect_url')
-    return redirect(redirect_url)
+    if request.POST:
+        user = UserProfile.objects.get(user=request.user)
+        product = Product.objects.get(pk=product_id)
+
+        test = UserComments.objects.filter(user=user, product=product).exists()
+
+        if test:
+            deleted_obj = UserComments.objects.get(user=user, product=product)
+            deleted_obj.delete()
+            messages.success(request, "Your comment was successfully deleted.")
+        else:
+            messages.error(request, "Error - No such comment exists")
+
+        return redirect(redirect_url)
+
+    else:
+        messages.error(request, "No such URL exists")
+        return render(request, 'home/index.html')
