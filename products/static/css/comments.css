@@ -2,3 +2,9 @@
     background: black;
     color: white;
 }
+.card-body button{
+    background: black;
+    color:red;
+    position: relative;
+    bottom: 20px;
+}

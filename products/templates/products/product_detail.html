@@ -111,6 +111,13 @@
                 {% for comment in product_comment %}
                 <div class="card">
                     <div class="card-body">
+                        {% if request.user|lower == comment.user|lower %}
+                            <form method="POST" action="{% url 'remove_comment' product.id %}" class="form mb-2 mt-4" enctype="multipart/form-data">
+                                {% csrf_token%}
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                <button class="btn rounded-0" type="submit"><i class="far fa-trash-alt"></i> Delete</button>
+                            </form>
+                        {% endif %}
                         <h5 class="card-title"> {{ comment.user }}</h5>
                         <p class="card-text">{{ comment.comment }}</p>
                     </div>
@@ -118,7 +125,7 @@
                 <hr>
                 {% endfor %}
                 {% if request.user.is_authenticated %}
-                <form method="POST" action="{% url 'add_comment' product.id %}" class="form mb-2 mt-4" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'add_comment' product.id %}" class="form" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col">
                             {% csrf_token %}
