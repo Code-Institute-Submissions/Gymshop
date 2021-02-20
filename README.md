@@ -85,6 +85,12 @@
 
 ## Features Left to Implement
 
+- I would like to make the mobile nav a bit more user friendly for mobile users but due to the number of icons and bootstrap, this will take a lot of time.
+- Due to the low traffic and high number of products at the current stage, having 2 users order the last product at the exact same time, is unlikely but I would like to add some defensive programming for that in the future
+    - By law the first person who buys the item, gets it. Thus only once a transaction is completed will the stock of the items be ckecked and be reduced by the quantity of that item.
+    - Due to time constraints this will have to be implemented once traffic increases.
+- Better resolution Photographs
+
 # Technologies Used
 
 ## Languages
@@ -139,9 +145,16 @@ Link to the live page:
 # Credits
 
 ## Content
+- [Gym Equipment JSON content](https://www.fitandme.com/guide-gym-equipment-names-how-to-use/#tab-con-18)
+- [simplifaster](https://simplifaster.com/articles/curved-treadmills-pros-cons/)
+- [Flat treadmill](https://www.amazon.com/TOE-Treadmill-Installation-Absorption-Apartment/dp/B08LQPPL5X/ref=sr_1_3?dchild=1&keywords=Small+Treadmill+for+Apartment&qid=1611918688&sr=8-3)
 
 ## Media
 
+- [Unsplash](https://unsplash.com/)
+- [kaggle](https://www.kaggle.com/dutt2302/gym-equipment?select=gym_data)
+- [Json Media](https://www.fitandme.com/guide-gym-equipment-names-how-to-use/#tab-con-18)
 
 ## Acknowledgements
-- [Boutique Ado](https://github.com/KeisGSmit/OnlineShop)
+- I got the inspiration to make this project as I used some of the styling and functionality applied on it from code institute "Project - [Boutique Ado](https://github.com/KeisGSmit/OnlineShop)"
+- The business Logic was inspired by [Gymshark](https://eu.gymshark.com/)
