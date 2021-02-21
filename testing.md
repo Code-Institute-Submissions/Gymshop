@@ -20,9 +20,6 @@ I had to fall back on my old-school technique of manuall testing everything.
     - [Search functionality](#Search-functionality)
     - [Logout](#Logout)
 
-- [Hidden features testing](#Hidden-features-testing)
-    - [Stripe](#Stripe)
-    - [Webhooks](#Webhooks)
 --- 
 # Functionality Testing 
 ---
@@ -79,16 +76,63 @@ I had to fall back on my old-school technique of manuall testing everything.
 - To access this feature a user must be logged in. Forcing URLS (not logged in) will result in a Sign in page appearing
 - A signed in user can add a product to their wishlist by clicking "Add to wishlist" - a success message will appear saying that the item has been added to their wishlist
 - The Add to Wishlist button is available on the products page or the product's details page. 
-
-### Forcing URLs
 - A user is unable to add produts through forcing URLs and will be redirected to the home page with a error message
 
 ## Modifying Wishlist
 - To access this feature a user must be logged in. Forcing URLS (not logged in) will result in a Sign in page appearing.
-- 
+- If a user is signed in and is forcing urls like `/wishlist/add/7` or `/wishlist/delete/2` results in a redirect to the homepage with a error message
+- Going to the wishlist with no items in the wishlist displays text saying 'Your wishlist is empty'
+- Going to the wishlist (with items in wishlist) will display each item in a table
+- On the far right there is a button "Remove from Wishlist"
+- Clicking that button removes the item from the user's wishlist
+
+### Purchasing items from the wishlist
+- If a user goes to their wishlist and has a item in their wihslist on the far right there is a button called "Add to bag"
+- Clicking that button will take a user to that product's product details page where the user can add it to their bag
+- Upon purchasing the item, it will remain inside the wishlist
+
 ## Commenting on products
+- Users need to be logged in to use this feature
+- Forcing urls like `comment/add/7` results in a redirect and a error message
+- A user will have to go to the product's details page to post a comment
+- Commenting more than once is not possible - users must delete their old comment abd re-comment
+    - This is to prevent spam
+-  Only the user who posted the comment can delete it
+- Upon successful commenting, the page redirects user to the same product's details page and their comment is on display 
+
 ## Deleting comments
-## Checkout
+- As stated above:
+    - Users need to be logged in to use this feature
+    - Forcing urls like `comment/delete/7` results in a redirect and a error message
+    - Only the user who posted the comment can delete it
+- Each comment posted by a user has a red button at the top of it's card with trash icon.
+- Clicking on it will redirect a user to the product's details page and their comment won't be present
+
+## Checkout, Stripe and webhooks
+- As a anonymous user
+    - A user add's products to their bag.
+    - The user clicks on their bag or "Go to secure checkout"
+    - They are at their bag view > clicking on secure checkout should take the user to the form where they submit their delivery and card details 
+        - No items in the bag results in them being unable to click the checkout button
+    - Filling out the checkout form (successfully) and clicking "Complete order" takes a user to the "Checkout success" page where their receipt is displayed to them
+        - Anonymous users are unable to save their delivery information
+    - Looking at stripe - The order has been placed
+    - Looking in the order form in the admin shows the order has been placed
+
+- As a registered user
+    - A user add's products to their bag.
+    - The user clicks on their bag or "Go to secure checkout"
+    - They are at their bag view > clicking on secure checkout should take the user to the form where they submit their delivery and card details 
+        - No items in the bag results in them being unable to click the checkout button
+    - Filling out the checkout form (successfully) and clicking "Complete order" takes a user to the "Checkout success" page where their receipt is displayed to them
+        - If the user clicked on "Save this delivery information to my profile" at previous checkout then the form auto completes the delivery information for them
+    - Looking at stripe - The order has been placed
+    - Looking in the order form in the admin shows the order has been placed
+
+### Failing checkouts
+- Once the checkout form has been submitted, the window is closed, to simulate a failure
+- Looking at stripe and the order admin the orders have been placed and stripe successfully proccessed the payment
+
 ### Checkout Conflict
 - If two users order the last item at the exact same time nothing will happen
 - The user Who checks out first (successfully) will modify the stock 
@@ -97,10 +141,9 @@ I had to fall back on my old-school technique of manuall testing everything.
 - The second user will not be able to checkout until they modify their bag
 - After the modifications the second user is able to checkout
 ## Profile
+- 
 ## Product Admin
 ## Browsing products
 ## Search functionality
 ## Logout
-# Hidden features testing
-## Stripe
-## Webhooks
+

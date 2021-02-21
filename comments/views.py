@@ -29,7 +29,7 @@ def add_comment(request, product_id):
 
         return redirect(redirect_url)
     else:
-        messages.error(request, "Something went wrong try again")
+        messages.error(request, "No such URL exists")
         return render(request, 'home/index.html')
 
 @login_required
