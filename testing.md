@@ -140,10 +140,40 @@ I had to fall back on my old-school technique of manuall testing everything.
 - If the remaining stock is less than 0 then a error will apear telling them which item has run out of stock
 - The second user will not be able to checkout until they modify their bag
 - After the modifications the second user is able to checkout
+
 ## Profile
-- 
+- Users need to be logged in to use this feature
+- Being logged out and using this feature results in a redirect to the sign in page
+- Once the user accesses the profile page they can update their delivery information and see their order history
+- Updating the delivery information and attempting to purchase a item will result in the updated delivery information being auto-completed
+- Clicking on the delivery history displays the order's receipt page
+
 ## Product Admin
+- Users need to be logged in as a superuser/admin to use this feature
+- Forcing the right URLS result in the user being redirected to the sign in page (anonymous user) or redirect to the home page with a error message (regular user)
+- Clicking on "Product Management" allows the admin to add a product - filling out the form creates a new product
+    - The price and stock can not be negative
+    - The price can not have more than 6 figures
+    - The user will be redirected to that product's details page
+- On the products page or product's details page the admin can edit or delete products
+    - Editing a product results in the same form, as adding a product, being displayed but the product's details are auto-filled in
+    - Clicking on Delete removes the product from the database
+
 ## Browsing products
+- Any user can browse products
+- A user can use the Nav bar to filter through products - clearance, resistance machines etc.
+- On the products page a user can filter results in ascending or descending order of: Price, Name and Category 
+
 ## Search functionality
+- In the top Nav bar is a search bar (any user can use it)
+- If a user enters a word in the search bar, the products name or description will be searched for that word
+- If a relavant word is not found, no products will be displayed and a search result will be displayed
+- If a relavant word is found, products will be displayed along with the number of search results
+
 ## Logout
+- Only a user that is logged in can use this
+- Under "My Account" > Logout
+- This takes users to a sign out page where they can click "Cancel" or "Sign Out"
+- Clicking cancel redirects the user to the home page and they are still logged in
+- Clicking sign out redirects the user to the homepage and they are logged out.
 
