@@ -8,7 +8,8 @@
       "description": "One of the best aspects of cardio (cardiovascular) machinery is that the world is your oyster! You can perform steady state (long distance) cardio at a moderate intensity or crank things up and perform some interval training (varying intensities on repeat) as well as performance based cardio at higher intensities.",
       "price": 500,
       "category": 2,
-      "image": "treadmill-1.jpg"
+      "image": "treadmill-1.jpg",
+      "stock": 10
     }
   },
   {
@@ -20,7 +21,8 @@
       "description": "A curved treadmill is a non-motorized, concave device that allows users to walk and run on it with each foot strike propelling the belt behind them. The system is designed to exploit the vertical and horizontal contours, pulling the belt down and back from the walking or running stride, thus removing the need for an electric motor—a benefit for those who want to pace themselves naturally.",
       "price": 3500,
       "category": 2,
-      "image": "00000001.jpg"
+      "image": "00000001.jpg",
+      "stock": 10
     }
   },
   {
@@ -32,7 +34,8 @@
       "description": "Easy Movement and Save Space: The minimalist treadmill with a minimum height of only 4.7inch, length of only 49.2 inch. With convenient transportation wheels to move around without hassle. You could store it in your living room, study, sofa, a small corner or under the bed.",
       "price": 680.99,
       "category": 2,
-      "image": "00000028.jpg"
+      "image": "00000028.jpg",
+      "stock": 10
     }
   },
   {
@@ -44,7 +47,8 @@
       "description": "You can perform steady state and interval cardio at a basic level, but you’ll find that some rowing machines actually include inbuilt games too so that you don’t get bored on your fitness journey. Performance based cardio (operating at near maximal levels) is also possible with a rower.",
       "price": 1499.99,
       "category": 2,
-      "image": "00000036.jpg"
+      "image": "00000036.jpg",
+      "stock": 10
     }
   },
   {
@@ -56,7 +60,8 @@
       "description": "You can focus on your fitness through long distance cardio or interval training or tweak the resistance (and sometimes incline) settings to focus on different aspects of your lower body and make the workout harder. Your upper body is also going to get a decent workout provided you use the moving handles.",
       "price": 799.99,
       "category": 2,
-      "image": "00000004.jpg"
+      "image": "00000004.jpg",
+      "stock": 10
     }
   },
   {
@@ -68,7 +73,8 @@
       "description": "You can perform any cardio variety without having to worry about any impact taking place on your joints in the process – when you integrate some resistance this proves to be a fantastic lower body toner as well for every area of the legs.",
       "price": 300,
       "category": 2,
-      "image": "Upright-bike-1.jpg"
+      "image": "Upright-bike-1.jpg",
+      "stock": 10
     }
   },
   {
@@ -80,7 +86,8 @@
       "description": "A stair mill literally allows you to simulate walking upstairs on an endless cycle – this is a great form of low impact cardiovascular exercise. Stair mills should primarily be used as an easily accessible low impact form of cardio though they can be an effective calf and even glute (bottom) toner when used with some resistance.",
       "price": 2500,
       "category": 2,
-      "image": "Stair-mill.jpg"
+      "image": "Stair-mill.jpg",
+      "stock": 10
     }
   },
   {
@@ -92,7 +99,8 @@
       "description": "Like the upright exercise bike, spin bikes will allow you to develop your fitness while targeting all aspects of the lower body – spinners are perhaps a little more versatile in terms of the exercises you can perform on them as their frame usually accommodates standing up in the saddle a little more comfortably than a standard upright bike.",
       "price": 600.99,
       "category": 2,
-      "image": "Spinning-bike.jpg"
+      "image": "Spinning-bike.jpg",
+      "stock": 10
     }
   },
   {
@@ -104,7 +112,8 @@
       "description": "Leg presses target every muscle in the lower body including the thighs, the hamstrings, the glutes and the calves with different foot positions yielding a different area being prioritized at once. You can safely and effectively target any muscle in the lower body through either applying a foot stance that targets an even balance of all of them at once or slightly altering your stance to prioritize a certain area.",
       "price": 1499.99,
       "category": 3,
-      "image": "Leg-press-machine.jpg"
+      "image": "Leg-press-machine.jpg",
+      "stock": 10
     }
   },
   {
@@ -116,7 +125,8 @@
       "description": "A hack squat machine is designed to allow you to perform a squatting movement with a major emphasis being placed on the thighs to isolate and develop them. You can use a hack squat machine to target every aspect of the front and back of your leg muscles through either placing the feet further forward or backward on the platform.",
       "price": 1600,
       "category": 3,
-      "image": "Hack-squat-machine.jpg"
+      "image": "Hack-squat-machine.jpg",
+      "stock": 10
     }
   },
   {
@@ -128,7 +138,8 @@
       "description": "A leg extension machine will allow you to isolate the quads on their own and either strengthen them, tone them or a combination of the two. Leg extension machines work the quadriceps muscle. You can use a leg extension machine to effectively develop muscle tone in your quads as well as improve their endurance and / or strength.",
       "price": 749.99,
       "category": 3,
-      "image": "Leg-extension-machine.jpg"
+      "image": "Leg-extension-machine.jpg",
+      "stock": 10
     }
   },
   {
@@ -140,7 +151,8 @@
       "description": "Serving as a complete opposite to the leg extension machine, the leg curl machine isolates and tones / strengthens the hamstring muscle. The leg curl isolates and develops the hamstring muscles, though there is also some calf integration too. ",
       "price": 750,
       "category": 3,
-      "image": "Leg-curl-machine.jpg"
+      "image": "Leg-curl-machine.jpg",
+      "stock": 10
     }
   },
   {
@@ -152,7 +164,8 @@
       "description": "A seated calf machine is a great way to isolate and develop the calf muscles. Seated calf machines isolate the calves while strengthening the ankle joint. You can use a seated calf machine to tone, improve the endurance of and generally strengthen the calf muscles.",
       "price": 250,
       "category": 3,
-      "image": "Seated-calf-machine.jpg"
+      "image": "Seated-calf-machine.jpg",
+      "stock": 10
     }
   },
   {
@@ -164,7 +177,8 @@
       "description": "Slightly different to a seated calf machine, the standing calf machine allows the user to isolate and develop their calf muscles from a slightly different angle that some believe helps to lengthen them. Standing calf machines target the calves and help to strengthen the ankle joint.",
       "price": 450,
       "category": 3,
-      "image": "standing_calf_raise.jpg"
+      "image": "standing_calf_raise.jpg",
+      "stock": 10
     }
   },
   {
@@ -175,7 +189,8 @@
       "name": "Gym Chalk",
       "description": "Gym Chalk provides extra grip when lifting weights",
       "price": 80.99,
-      "image": "chalk-box-8pieces-1-600x600.jpg"
+      "image": "chalk-box-8pieces-1-600x600.jpg",
+      "stock": 10
     }
   },
   {
@@ -187,7 +202,8 @@
       "description": "Leg abduction machines are a safe and effective way to target the outer thigh muscles. Leg abduction machines are designed to target the outer thighs in isolation to the rest of the body. You can use a leg abduction machine to effectively target and tone / strengthen the outer thigh muscles and aid in your overall stability.",
       "price": 1200,
       "category": 3,
-      "image": "Leg-abduction-machine.jpg"
+      "image": "Leg-abduction-machine.jpg",
+      "stock": 10
     }
   },
   {
@@ -199,7 +215,8 @@
       "description": "A leg adduction machine served as the counterpart to a leg abduction machine by targeting the inner thigh muscles. Leg adduction machines target the inner thighs in isolation to the rest of the body. You can use a leg adduction machine to effectively isolate and develop the inner thigh muscles, which in turn will aid in stability.",
       "price": 1200,
       "category": 3,
-      "image": "Leg-adduction-machine.jpg"
+      "image": "Leg-adduction-machine.jpg",
+      "stock": 10
     }
   },
   {
@@ -211,7 +228,8 @@
       "description": "Lat pulldown machines have been around since almost the very beginning of resistance training practices and they directly target the lat (back) muscles. Without getting too technical, the lat pulldown will effectively target every muscle in the back though there is a particular emphasis placed on the side of the back muscles as well as the forearms when used without lifting aids.",
       "price": 750,
       "category": 3,
-      "image": "Lat-pulldown-machine.jpg"
+      "image": "Lat-pulldown-machine.jpg",
+      "stock": 10
     }
   },
   {
@@ -223,7 +241,8 @@
       "description": "Pec deck machines have been designed to isolate and develop the pec (chest) muscles. You’ll be targeting the chest muscles on their own when you use the pec deck – your seat position will determine which part of the pec you access. A pec deck machine can be used to effectively target and strengthen, tone or improve the endurance of the pec muscles.",
       "price": 650,
       "category": 3,
-      "image": "Pec-deck-machine.jpg"
+      "image": "Pec-deck-machine.jpg",
+      "stock": 10
     }
   },
   {
@@ -235,7 +254,8 @@
       "description": "Cable crossover machines are one of the most versatile pieces of gym equipment available – they get their popular name “crossover” from the ability they grant the user to perform a unique kind of chest fly that sees the arms crossing over in the middle. This exercise is simply one of the hundreds you can perform on this machine though it is the most popular. This is completely dependent on the exercise – you can use the crossover to perform almost any exercise you can think of.",
       "price": 474.99,
       "category": 3,
-      "image": "Cable-crossover-machine.jpg"
+      "image": "Cable-crossover-machine.jpg",
+      "stock": 10
     }
   },
   {
@@ -247,7 +267,8 @@
       "description": "A chest press machine is a great way to safely target the chest muscles, shoulders and triceps without the risk of injury through dropping weights or destabilizing. This entirely depends on the variety of chest press you are using, though you’re typically going to be targeting an even balance of both chest muscles at once with an emphasis being placed more on one area depending on your seat angle.",
       "price": 1190,
       "category": 3,
-      "image": "Chest-press-machine.jpg"
+      "image": "Chest-press-machine.jpg",
+      "stock": 10
     }
   },
   {
@@ -259,7 +280,8 @@
       "description": "A butt blaster machine is an amazing way to target the glute (butt) muscles and tone them. Butt blaster machines isolate the glute muscles individually. You can use the butt blaster machine to effectively strengthen and tone or develop the glute muscles. ",
       "price": 449.99,
       "category": 3,
-      "image": "Butt-blaster-machine-1.jpg"
+      "image": "Butt-blaster-machine-1.jpg",
+      "stock": 10
     }
   },
   {
@@ -271,7 +293,8 @@
       "description": "An ab crunch machine is a fantastic way to isolate the abdominal muscles and develop them without integrating any other body parts. The ab crunch machine directly targets the ab muscles and allows the user to tone them without “cheating” their way through the exercise as is possible when performing it without a machine.",
       "price": 999.99,
       "category": 3,
-      "image": "Ab-crunch-machine-1.jpg"
+      "image": "Ab-crunch-machine-1.jpg",
+      "stock": 10
     }
   },
   {
@@ -283,7 +306,8 @@
       "description": "A Pilates reformer machine will allow you to effectively practice various Pilates exercises with added resistance and support from cables. A Pilates reformer machine can effectively be used to target every muscle in the body depending on which exercise you choose to perform on it.",
       "price": 400,
       "category": 3,
-      "image": "Pilates-reformer-machine.jpg"
+      "image": "Pilates-reformer-machine.jpg",
+      "stock": 10
     }
   },
   {
@@ -295,7 +319,8 @@
       "description": "A barbell is essentially a long bar that serves as a loading platform for weight plates – it’s totally up to you as to which area of the body you choose to target with it. You can use a barbell to enhance strength, muscle tone and generally improve your skeletal structure.",
       "price": 106.99,
       "category": 1,
-      "image": "Standard-barbell-1.jpg"
+      "image": "Standard-barbell-1.jpg",
+      "stock": 10
     }
   },
   {
@@ -307,7 +332,8 @@
       "description": "An Olympic barbell functions in the same manner as a normal barbell, except that it is of a higher quality to ensure that the bar can handle excessive loads. You can almost perform any exercise you can imagine using an Olympic barbell except that, due to its build quality, it can take a near limitless weight load and isn’t likely to bend under excess pressure.",
       "price": 239.99,
       "category": 1,
-      "image": "Olympic-barbell-1.jpg"
+      "image": "Olympic-barbell-1.jpg",
+      "stock": 10
     }
   },
   {
@@ -319,7 +345,8 @@
       "description": "A fixed weight dumbbell is simply a handheld weight, set at a fixed weight that you can perform a series of thousands of exercises with. Using a fixed weight dumbbell will allow you to effectively target and tone / strengthen almost any body part you can think of when used in a safe and effective manner. You can target absolutely any area of the body using either a singular or pair of dumbbells together.",
       "price": 20,
       "category": 1,
-      "image": "00000031.jpg"
+      "image": "00000031.jpg",
+      "stock": 10
     }
   },
   {
@@ -331,7 +358,8 @@
       "description": "A fixed weight dumbbell is simply a handheld weight, set at a fixed weight that you can perform a series of thousands of exercises with. Using a fixed weight dumbbell will allow you to effectively target and tone / strengthen almost any body part you can think of when used in a safe and effective manner. You can target absolutely any area of the body using either a singular or pair of dumbbells together.",
       "price": 29.99,
       "category": 1,
-      "image": "00000011.jpg"
+      "image": "00000011.jpg",
+      "stock": 10
     }
   },
   {
@@ -343,7 +371,8 @@
       "description": "A climbing rope is a fantastic way to develop upper and lower body strength while targeting every aspect of the core and upper and lower body muscles. You can use a climbing rope to develop fitness and strength by climbing up and down it in a vertical line and even performing certain holds while in mid air using your body weight.",
       "price": 51.99,
       "category": 4,
-      "image": "climbing-rope-1.jpg"
+      "image": "climbing-rope-1.jpg",
+      "stock": 10
     }
   },
   {
@@ -355,7 +384,8 @@
       "description": "Kettlebells are a fantastic way to target the entire body and engage stabilization muscles through the performance of smooth, free flowing movements that require a number of areas to fire off at once (more so than a typical dumbbell or barbell movement.)",
       "price": 44.99,
       "category": 5,
-      "image": "Kettlebell.jpg"
+      "image": "Kettlebell.jpg",
+      "stock": 10
     }
   },
   {
@@ -367,7 +397,8 @@
       "description": "An exercise mat is a comfortable platform for you to perform core and bodyweight exercises on. You can use an exercise mat to target almost any area of the body in comfort and safety. Uses vary but ultimately you can choose to perform any body weight or ab exercise on it instead of exposing your skin / body to a hard and / or rough surface area.",
       "price": 14.99,
       "category": 6,
-      "image": "Exercise-mat.jpg"
+      "image": "Exercise-mat.jpg",
+      "stock": 10
     }
   },
   {
@@ -379,7 +410,8 @@
       "description": "An EZ curl bar is a small, specially designed barbell that allows you to perform various arm exercises while safely accommodating the wrists (standard barbells can cause issues with this area.). EZ bars are typically used to target the biceps and triceps. You can perform almost any biceps or triceps exercise while protecting the wrists due to the special position of the bar grips.",
       "price": 25.99,
       "category": 4,
-      "image": "EZ-curl-bar.jpg"
+      "image": "EZ-curl-bar.jpg",
+      "stock": 10
     }
   },
   {
@@ -391,7 +423,8 @@
       "description": "A triceps bar is a specially designed bar that allows the user to perform triceps exercises with a neutral grip (palms facing each other) thus providing more stability on a wide array of triceps movements. The triceps bar is primarily going to be used to target the triceps though it can also be used for some biceps movements too.",
       "price": 19.99,
       "category": 6,
-      "image": "triceps-bar-1.jpg"
+      "image": "triceps-bar-1.jpg",
+      "stock": 10
     }
   },
   {
@@ -403,7 +436,8 @@
       "description": "A flat bench is a specially designed bench that’s typically going to be used for barbell bench-pressing, though it can accommodate dumbbell bench pressing in conjunction with other flat angled exercises. A flat bench can theoretically be used to target the chest, triceps, and shoulders through an array of exercises, though typically the chest will be the primary focus. You can perform almost any exercise that involves the body being laid in a flat position.",
       "price": 49.99,
       "category": 6,
-      "image": "Flat-bench.jpg"
+      "image": "Flat-bench.jpg",
+      "stock": 10
     }
   },
   {
@@ -415,7 +449,8 @@
       "description": "An adjustable bench is a highly versatile weight bench that allows the user to change the seat angle to accommodate almost any form of pressing exercise. You’ll primarily be targeting the chest, triceps and shoulders with an adjustable bench. You can perform almost any dumbbell pressing exercise – barbell movements are also possible though you’ll be limited due to the lack of a spotting platform.",
       "price": 109.99,
       "category": 6,
-      "image": "Adjustable-bench.jpg"
+      "image": "Adjustable-bench.jpg",
+      "stock": 10
     }
   },
   {
@@ -427,7 +462,8 @@
       "description": "An Olympic weight bench is a specially designed bench with an integrated spotting platform for assistance with maximal loads. Olympic benches can come in flat, decline or incline varieties. An Olympic weight bench is typically going to target the chest, shoulders, and triceps. You can target the chest, triceps, and shoulders using maximal loads due to the specially designed bench frame.",
       "price": 149.99,
       "category": 4,
-      "image": "Olympic-weight-bench-1.jpg"
+      "image": "Olympic-weight-bench-1.jpg",
+      "stock": 10
     }
   },
   {
@@ -439,7 +475,8 @@
       "description": "An incline bench is simply a flat bench variant that is instead angled at a set incline permanently. An incline bench primarily targets the chest, shoulders, and triceps. You can perform any pressing or isolation movement that requires the body to be in an inclined position.",
       "price": 79.99,
       "category": 5,
-      "image": "Incline-bench.jpg"
+      "image": "Incline-bench.jpg",
+      "stock": 10
     }
   },
   {
@@ -451,7 +488,8 @@
       "description": "Decline benches are purposefully designed to accommodate movements where the body needs to be laid exclusively in a decline position. A decline bench will typically target the abs, chest, shoulders, and triceps. Any exercise that needs to be performed from a declined angle.",
       "price": 60.99,
       "category": 5,
-      "image": "decline-bench-1.jpg"
+      "image": "decline-bench-1.jpg",
+      "stock": 10
     }
   },
   {
@@ -463,7 +501,8 @@
       "description": "A balance board is a unique exercise device that allows the user to perform exercises while simultaneously having to focus on their ability to balance using their stabilizer muscles and core strength. You can effectively target the entire body with a balance board though you’ll be using an even mix of several areas at once when exercising on it due to the forced participation of your stabilizer muscles and core.",
       "price": 14.99,
       "category": 5,
-      "image": "fitme-premium-wooden-balance-board-n.jpg"
+      "image": "fitme-premium-wooden-balance-board-n.jpg",
+      "stock": 10
     }
   },
   {
@@ -475,7 +514,8 @@
       "description": "A foam roller is a special foam stick used to help with stretching and rehabilitation by applying pressure to high-tension areas and effectively helping to put them at ease. Foam rollers can be used to target anywhere on the body where tension needs to be eased. As opposed to being used for exercise, a foam roller should be viewed as a rehabilitation and supplementary device to help you get the most out of your training by helping to eliminate muscular tightness and tension thus improving flexibility and blood flow.",
       "price": 19.99,
       "category": 6,
-      "image": "Foam-roller.jpg"
+      "image": "Foam-roller.jpg",
+      "stock": 10
     }
   },
   {
@@ -487,7 +527,8 @@
       "description": "A jump rope is a traditional piece of exercise equipment used for either low or high intensity cardiovascular exercise. Jump ropes are typically used to target the lungs for effective fitness though they also help develop the calves and other aspects of the legs.",
       "price": 4.99,
       "category": 5,
-      "image": "Jump-rope.jpg"
+      "image": "Jump-rope.jpg",
+      "stock": 10
     }
   },
   {
@@ -499,7 +540,8 @@
       "description": "An ab roller wheel is a special wheel with handles attached specifically designed for the performance of the abdominal rollout exercise. The ab wheel targets every aspect of the abdominal muscles. An ab roller is specially designed for the abdominal rollout exercise – it is easily one of if not the singular most effective ab exercise for the front of the abdomen.",
       "price": 18.99,
       "category": 6,
-      "image": "Ab-roller-wheel1.jpg"
+      "image": "Ab-roller-wheel1.jpg",
+      "stock": 10
     }
   },
   {
@@ -511,7 +553,8 @@
       "description": "Gymnastic rings are used to perform bodyweight exercises in a similar fashion to a suspension unit, though they are suspended from a much greater height thus opening up a wider array of exercise options and positions. You can successfully target the entire body using gymnastic rings.",
       "price": 35.99,
       "category": 5,
-      "image": "Gymnastic-rings.jpg"
+      "image": "Gymnastic-rings.jpg",
+      "stock": 10
     }
   },
   {
@@ -523,7 +566,8 @@
       "description": "Gym Gloves are essential to prevent sores on your hands from lifting heavy weights.",
       "price": 60.99,
       "category": 5,
-      "image": "887791196637-1-pdpxl.jpg"
+      "image": "887791196637-1-pdpxl.jpg",
+      "stock": 10
     }
   },
   {
@@ -535,7 +579,8 @@
       "description": "The wall ball is a fantastic piece of equipment for developing total body power. Wall balls integrate your upper body and hips by forcing them into action in the process of throwing the ball. You can develop your power in the pursuit of enhanced athleticism and strength.",
       "price": 41,
       "category": 4,
-      "image": "Wall-ball.jpg"
+      "image": "Wall-ball.jpg",
+      "stock": 10
     }
   },
   {
@@ -547,7 +592,8 @@
       "description": "Medicine balls can be used for a variety of exercises to develop the core, develop fitness and / or improve muscle tone in the lower and upper body. You can use a medicine ball to perform a series of exercises to effectively target the whole body. With a medicine ball, your options are varied – exercise choices range from simple core exercises to advanced athletic movements depending on your goals.",
       "price": 84.99,
       "category": 5,
-      "image": "Medicine-ball.jpg"
+      "image": "Medicine-ball.jpg",
+      "stock": 10
     }
   },
   {
@@ -559,7 +605,8 @@
       "description": "A plyo box can vary in height and is used to develop your lower body power and general full body fitness. Plyo boxes target primarily your lower body and develop your fitness. Though plyo boxes are primarily used to develop leg power, you can also use them to perform unique exercises depending on their height and to tone the lower body.",
       "price": 48.99,
       "category": 5,
-      "image": "Jump-box.jpg"
+      "image": "Jump-box.jpg",
+      "stock": 10
     }
   },
   {
@@ -571,7 +618,8 @@
       "description": "A hyperextension bench is a specially designed bench / platform used to perform the important back extension exercise. Hyperextension benches are used to develop core balanced and strengthen the lower back.",
       "price": 134.99,
       "category": 5,
-      "image": "Hyper-extension-bench.jpg"
+      "image": "Hyper-extension-bench.jpg",
+      "stock": 10
     }
   },
   {
@@ -583,7 +631,8 @@
       "description": "A glute ham developer is a specially designed platform that allows you to perform a unique bodyweight version of a hamstring curl – this is perhaps the most challenging leg exercise around but is worth every ounce of sweat for the strength and size it will afford your hamstrings and glutes.",
       "price": 360.99,
       "category": 6,
-      "image": "Glute-ham-developer.jpg"
+      "image": "Glute-ham-developer.jpg",
+      "stock": 10
     }
   },
   {
@@ -595,7 +644,8 @@
       "description": "Preacher benches are used to perform an isolated version of the bicep curl that doesn’t allow you to integrate any other body parts thus focusing purely on the biceps. This special bench is used purely to target the biceps. You can perform isolated dumbbell or barbell variants of the biceps curl.",
       "price": 166.99,
       "category": 4,
-      "image": "Preacher-bench.jpg"
+      "image": "Preacher-bench.jpg",
+      "stock": 10
     }
   },
   {
@@ -607,7 +657,8 @@
       "description": "An arm blaster is a special harness that allows you to isolate the biceps when performing a barbell bicep curl. Arm blasters primarily target the biceps in total isolation from the rest of the body. You can use an arm blaster to perform any barbell bicep curl exercise while ensuring no other part of your body attempts to get involved and overtake the area you are targeting.",
       "price": 39.99,
       "category": 6,
-      "image": "Arm-blaster.jpg"
+      "image": "Arm-blaster.jpg",
+      "stock": 10
     }
   },
   {
@@ -619,7 +670,8 @@
       "description": "An abdominal bench is a specially designed bench that encourages a safer position while performing abdominal exercises and usually allows you to use added weight. Abdominal benches work the front of your abdomen. You can perform sit-ups and crunches using an abdominal bench.",
       "price": 188.99,
       "category": 6,
-      "image": "Abdominal-bench.jpg"
+      "image": "Abdominal-bench.jpg",
+      "stock": 10
     }
   },
   {
@@ -631,7 +683,8 @@
       "description": "A stability ball is a large air filled ball that allows you to perform exercises on an unstable platform, thus integrating stabilization muscles and the core more so than when performing these exercises without it.",
       "price": 33.99,
       "category": 4,
-      "image": "Stability-ball.jpg"
+      "image": "Stability-ball.jpg",
+      "stock": 10
     }
   },
   {
@@ -643,7 +696,8 @@
       "description": "A dip bar is used to perform the triceps dip exercise in a convenient manner. Dip bars target the shoulders, chest, and triceps depending on your body position. You can perform any variation of the dip exercise (some parallel bars start with narrow bar spacing and gradually expand to allow for both wide and close grip dipping.",
       "price": 56.99,
       "category": 5,
-      "image": "Dip-bar.jpg"
+      "image": "Dip-bar.jpg",
+      "stock": 10
     }
   },
   {
@@ -655,7 +709,8 @@
       "description": "A pull up bar allows you to perform either wide grip pull ups or chin ups in an easy and convenient manner. A pull up bar primarily work the back, bicep and forearm muscles with an emphasis being placed on a different area depending on the pull up variety being performed. You can perform several variations of the pull up exercise.",
       "price": 38.99,
       "category": 4,
-      "image": "Pull-up-bar.jpg"
+      "image": "Pull-up-bar.jpg",
+      "stock": 10
     }
   },
   {
@@ -667,7 +722,8 @@
       "description": "Power towers are a convenient combination of a leg raise and dipping station (to perform abdominal and dipping exercises) in conjunction with a pull up bar to perform pull up exercise variations. There is sometimes an additional press up station at the base thus making this a great all in one solution for performing a variety of upper body exercises. You can target the triceps, shoulders, back, biceps chest and abs with a power tower.",
       "price": 165.99,
       "category": 6,
-      "image": "Power-tower.jpg"
+      "image": "Power-tower.jpg",
+      "stock": 10
     }
   },
   {
@@ -679,7 +735,8 @@
       "description": "A dumbbell rack is a convenient storage solution for fixed weight dumbbells of any size and can accommodate anywhere between a few to as many as twenty pairs at once. As this is not an exercise machine, the only area likely to get a workout is your lungs when you retrieve some of the heavier weights from the rack!",
       "price": 266,
       "category": 5,
-      "image": "Dumbbell-rack.jpg"
+      "image": "Dumbbell-rack.jpg",
+      "stock": 10
     }
   },
   {
@@ -691,7 +748,8 @@
       "description": "Similar to a dumbbell rack, a barbell rack is a fantastic storage solution for barbells – they vary immensely in terms of shape and size depending on what kind of barbell they are accommodating. Some are designed for Olympic bar storage whereas others are designed for storing pre set bars. You won’t be targeting any muscle groups with a barbell rack but you’ll likely be avoiding many injuries as a result of not tripping over loose barbells anymore.",
       "price": 265,
       "category": 4,
-      "image": "barbell-rack-1.jpg"
+      "image": "barbell-rack-1.jpg",
+      "stock": 10
     }
   },
   {
@@ -703,7 +761,8 @@
       "description": "A weight tree is a convenient storage solution for weight plates – they are typically designed for Olympic plates though one-inch plate trees do exist. You can use a weight tree to neatly store your weight plates in numerical order thus providing a safer training environment.",
       "price": 211.99,
       "category": 4,
-      "image": "Weight-tree.jpg"
+      "image": "Weight-tree.jpg",
+      "stock": 10
     }
   },
   {
@@ -715,7 +774,8 @@
       "description": "A squat rack is a specially designed rack for performing free weight squats with inbuilt safety bars and ledges to allow you to drop the bar or re-rack it quickly when in danger. Primarily every muscle in the lower body, though squat racks can also be useful for targeting the shoulders via the military press exercise and even the back when performing rack pulls (a deadlift variant.)",
       "price": 265.99,
       "category": 4,
-      "image": "squat-rack-1.jpg"
+      "image": "squat-rack-1.jpg",
+      "stock": 10
     }
   },
   {
@@ -727,7 +787,8 @@
       "description": "A smith machine is a specially designed rack with an inbuilt barbell – you can use it to load weight plates onto and perform any barbell exercise without the risk of injury due to the bar being on guided rails (and usually incorporating a safety catch.). You can use the smith machine to target every muscle in the body depending on the exercise you choose to perform.",
       "price": 1344.99,
       "category": 6,
-      "image": "Smith-machine.jpg"
+      "image": "Smith-machine.jpg",
+      "stock": 10
     }
   },
   {
@@ -739,7 +800,8 @@
       "description": "The power rack is an all in one solution for safe Olympic lifting and strength training practice – it is essentially a cage with inbuilt and adjustable safety bars to allow you to perform anything from deadlifting to squatting from variable heights, safe in the knowledge that you can drop the load when in danger. This piece of equipment facilitates an enormous array of exercises that will allow you to target the entire body.",
       "price": 331.99,
       "category": 5,
-      "image": "Power-rack.jpg"
+      "image": "Power-rack.jpg",
+      "stock": 10
     }
   },
   {
@@ -751,7 +813,8 @@
       "description": "Push up bars are a simple and convenient way to perform push ups using a neutral grip that is arguably more comfortable for the wrists.Push up bars typically target the chest, shoulders, and triceps.",
       "price": 69.99,
       "category": 5,
-      "image": "Push-up-bars.jpg"
+      "image": "Push-up-bars.jpg",
+      "stock": 10
     }
   },
   {
@@ -763,7 +826,8 @@
       "description": "A resistance band is a highly versatile piece of equipment that allows you to target any area of the body for either rehabilitation or enhancement purposes as part of a normal exercise. A resistance band can be used to work any area of the body.",
       "price": 19.99,
       "category": 5,
-      "image": "Resistance-bands.jpg"
+      "image": "Resistance-bands.jpg",
+      "stock": 10
     }
   },
   {
@@ -775,7 +839,8 @@
       "description": "Agility ladders are a fantastic way to develop your coordination and footwork for athletic purposes. Agility ladders will typically challenge your mind as well as your lungs and calves as you perform any one of a number of footwork drills. Being that the agility ladder is not a ladder per say due to it being laid out on the floor (though it is in the same shape as a ladder), you won’t be using it to climb! Instead, you’ll need to navigate through its squares using several planes of motion and exercises.",
       "price": 69.99,
       "category": 5,
-      "image": "Agility-ladder.jpg"
+      "image": "Agility-ladder.jpg",
+      "stock": 10
     }
   },
   {
@@ -787,7 +852,8 @@
       "description": "Aerobic steps are a highly versatile piece of equipment used to enhance or perform several bodyweight and other exercise variants. You can use an aerobic step to target the entire body as well as developing fitness. You can perform any number of exercises or enhance others via the integration of added height.",
       "price": 30.99,
       "category": 4,
-      "image": "aerobic-step-1.jpg"
+      "image": "aerobic-step-1.jpg",
+      "stock": 10
     }
   },
   {
@@ -799,7 +865,8 @@
       "description": "A punching bag can come in many different shapes and sizes, though the goal of this piece of equipment is ultimately to develop your boxing skills. The punching bag provides an amazing cardio workout as well as helping to tone your shoulders and triceps as well as pretty much every other area of the upper body.",
       "price": 72.99,
       "category": 4,
-      "image": "Punching-bag-1.jpg"
+      "image": "Punching-bag-1.jpg",
+      "stock": 10
     }
   }
 ]

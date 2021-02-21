@@ -112,6 +112,8 @@
 - [Microsoft Office](https://www.office.com/)
 - [favicon](https://www.favicon.cc/)
 - [JSHint](https://jshint.com/)
+- [AWS](https://aws.amazon.com/) - specifically S3
+- [Stripe](https://stripe.com/)
 
 
 ### Frameworks
@@ -132,13 +134,70 @@ The following are frameworks imported from the cheese shop (They can be found in
 
 # Testing
 
-Due to this section being too long, I have written [automatic tests](automatic_testing.md).
-I have used Gitpod for all my tests. 
+Due to this section being too long, I have written [a test file](testing.md).
 
 # Deployment
 
 Link to the live page: 
 ## Online deployment
+
+- First create a [heroku](https://dashboard.heroku.com/apps) account and create a app - The name is up to you: mine was operation-gym. Select a region closest to you - mine was europe
+- This assumes you already have a Stripe account. if not create one [here](https://stripe.com/)
+- In heroku, under *resources tab* > *Add-ons*, search for postgress and add it. Select Hobby-Dev as your plan - should be free
+- Head back to Gitpod and in the terminal run the following lines:
+    - remember to install the already listed requirements before freezing or else they will be lost 
+    - `pip3 install dj_database_url`
+    - `pip3 install psycopg2-binary`
+    - `pip3 install gunicorn`
+    - freeze the requirements
+        - `pip3 freeze --local > requirements.txt`
+
+- In Gitpod go to *Gymshop* > *settings.py* > under the imports add `import dj_database_url`
+- Still in *settings.py* > *DATABASES* > add the following code:
+```
+if "DATABASE_URL" in os.environ:
+    DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+```
+- Migrations need to be run again
+    - In the terminal type `python3 manage.py makemigrations --dry-run` to test if the migrations are made successfully
+    - Then `python3 manage.py makemigrations`
+    - Then `python3 manage.py migrate --plan` To see if they are executed properly
+    - Then `python3 manage.py migrate` - all should have a *OK* appended to them
+
+- Product data needs to be imported
+    - In the terminal type `python3 manage.py loaddata categories.json` followed by `python3 manage.py loaddata products.json`
+    - Products depend on categories so order is important
+
+- create a super user
+    - In the terminal type `python3 manage.py createsuperuser`
+    - follow the prompt in the terminal to create the superuser
+        - The login details for this user has been provided in the submission
+
+- Create a Procfile for heroku
+    - the context of the file should be `web: gunicorn [Main app].wsgi:application` - my main app is Gymshop
+
+- In the terminal run `heroku login -i` and login to your heroku account through the terminal
+
+- In the terminal run `heroku config:set DISABLE_COLLECTSTATIC=1`
+    - this is to prevent heroku from collecting static files
+
+- In Heroku under the setting tab > Config vars > show config vars,  add your variables:
+    - DATABASE_URL - Should already by provided by Postgress
+    - DEVELOPMENT - Boolean
+    - SECRET_KEY - Provided by Django
+    - STRIPE_PUBLIC_KEY - Provided by Stripe - "Publishable key" on Stripe dashboard
+    - STRIPE_SECRET_KEY - Provided by Stripe - "Secret key" on Stripe dashboard 
+    - STRIPE_WH_SECRET - Provided by Stripe - *Developers* > *Webhooks* > add an end point (this will be covered soon) > *Signing secret*
+- 
 
 ## Offline/Local Deployment
 
