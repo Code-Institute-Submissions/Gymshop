@@ -271,17 +271,22 @@ else:
 
     ```
     - Go to heroku > *Settings* > *Config Vars* > Add the configurations for above (Details are found in the CSV file)
-    - Remove the "DISABLE_COLLECTSTATIC" config var in heroku > Rebuild the app and see The files appearin the S3 bucket
-    - 
+    - Remove the "DISABLE_COLLECTSTATIC" config var in heroku > Rebuild the app and see the files appearing the S3 bucket
+    - Go to the S3 bucket > *Create folder* > name it media > upload the content of the media file > Set ACL public access to "read" in the objects column
+
+- Login to the deployed site (GUI) with admin login details and then verify them in `/admin`
 
 - In Heroku under the setting tab > Config vars > show config vars,  add your variables:
     - DATABASE_URL - Should already by provided by Postgress
-    - DEVELOPMENT - Boolean
+    - DEVELOPMENT - Boolean - False
     - SECRET_KEY - Provided by Django
     - STRIPE_PUBLIC_KEY - Provided by Stripe - "Publishable key" on Stripe dashboard
     - STRIPE_SECRET_KEY - Provided by Stripe - "Secret key" on Stripe dashboard 
-    - STRIPE_WH_SECRET - Provided by Stripe - *Developers* > *Webhooks* > add an end point (this will be covered soon) > *Signing secret*
-- 
+    - STRIPE_WH_SECRET - Provided by Stripe - *Developers* > *Webhooks* > add an end point > select endpoint > *Signing secret*
+        - log in to stripe *Stripe* > Side Nav, click *Developers* > *Webhooks* > add endpoint >  the endpoint is `[URL of deployed site]/checkout/wh/` > *recieve all events* > *add endpoint*
+        - Send a test webhook if this is successful. Sometimes it is slow to proccess this and a 401 error will appear but if you wait a few minutes it should work
+
+- Site is now fully Deployed and is 100% functional
 
 ## Offline/Local Deployment
 
