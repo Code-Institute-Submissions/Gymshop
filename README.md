@@ -248,7 +248,11 @@ else:
 - Connect django to S3
     - In *settings.py* > add the following code:
     ```
-    if 'USE_AWS' in os.enviorn:
+    if 'USE_AWS' in os.environ:
+        AWS_S3_OBJECT_PARAMETERS = {
+            'Expires': 'Fri, 11 Feb 2033 20:00:00 GMT',
+            'CacheControl': 'max-age=94608000',
+        }
         AWS_STORAGE_BUCKET_NAME = '[bucket name]'
         AWS_S3_REGION_NAME = '[region]'
         AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
@@ -267,7 +271,8 @@ else:
 
     ```
     - Go to heroku > *Settings* > *Config Vars* > Add the configurations for above (Details are found in the CSV file)
-    -   
+    - Remove the "DISABLE_COLLECTSTATIC" config var in heroku > Rebuild the app and see The files appearin the S3 bucket
+    - 
 
 - In Heroku under the setting tab > Config vars > show config vars,  add your variables:
     - DATABASE_URL - Should already by provided by Postgress
