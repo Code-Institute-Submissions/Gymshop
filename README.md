@@ -138,7 +138,7 @@ Due to this section being too long, I have written [a test file](testing.md).
 
 # Deployment
 
-Link to the live page: 
+Link to the live page: https://operation-gym.herokuapp.com/
 ## Online deployment
 
 - First create a [heroku](https://dashboard.heroku.com/apps) account and create a app - The name is up to you: mine was operation-gym. Select a region closest to you - mine was europe
@@ -187,16 +187,87 @@ else:
 
 - In the terminal run `heroku login -i` and login to your heroku account through the terminal
 
-- In the terminal run `heroku config:set DISABLE_COLLECTSTATIC=1 --app [heroku app name]`
-    - my app name is "operation-gym"
-    - this is to prevent heroku from collecting static files
-
 - In *settings.py* > *ALLOWED_HOSTS* > add the heroku app url and local host:
     - `ALLOWED_HOSTS = ['operation-gym.herokuapp.com', 'localhost']`
 
-- Push code to Heroku
+- Push code to Heroku - Note static files are not visible
+    - initialize a heroku repository if not done so already 
+        - Instructions for this can be found under the *Deploy* tab in heroku
     - Add and commit using git
     - Then `git push heroku master`
+
+- set up automatic deploys in heroku
+    - *Deploy* tab > *Deployment method* > Github > Search for the repository > Enable automatic deploys > master branch
+
+- Set up a AWS account and initialise S3
+    - Create a AWS account at [amazon web services](https://aws.amazon.com)
+    - *My Account* > *AWS management console* >  Look for S3 - under recently visited service, the search bar or the *find services* search bar
+    - *Create bucket* > Enter bucket name and region - name should be the same as heroku and region should be closest to you > Disable "Block public access"
+    - Acknowledge the bucket is public > *Create bucket* > Click on the bucket's hyperlink > *Properties* tab
+    - Scroll down to *Static Website Hosting* > *Edit* > *Static Website Hosting* - enable > *Hosting Type* - Host a static website > Fill out defualt values > *Save*
+    - *Permissions* tab > *CORS* configuration > add the following code and save:
+        ```
+        [
+            {
+                "AllowedHeaders": [
+                    "Authorization"
+                ],
+                "AllowedMethods": [
+                    "GET"
+                ],
+                "AllowedOrigins": [
+                    "*"
+                ],
+                "ExposeHeaders": []
+            }
+        ]
+        ```
+    - *Permissions* tab > *Bucket Policy* > Edit > *Policy Generator* > a new tab will open
+        - Policy Type: S3
+        - Effect: Allow
+        - Principal: *
+        - Actions : GetObject
+        - ARN: paste from previous tab
+    - *Add Statement* > *Generate Policy* > Copy the Policy > go back to the previous tab and paste it in
+        - add `/*` at the end of the resource key > *Save*
+    - *Permissions* tab > *ACL* > *Public access* > Tick "List" under the objects column
+    - In the top Nav under *Services* > *IAM* > *Groups* > *Create new group* > name : *manage-operation-gym* > *Next step* > *Next step* > *Create group*
+    - In the side Nav click *Policies* > *Create Policy* > *JSON* tab > *Import managed Policy* > search for: "AmazonS3FullAccess" > *import*
+    - Create a list ([]) at the resource value and paste the ARN twice and append `/*` to the end of the second ARN (both are strings so "" is needed and need to be comma seperated)
+        - `["ARN", "ARN/*"]`
+    - *Next: tags* > *Next: Review* > provide name and description > *Create Policy*
+    - Side Nav, click on *Groups* > *manage-operation-gym* > *Permissions* tab > *Attach Policy* > search and select the policy that was created > Attach Policy
+    - Side Nav, click on *Users* > *Add User* > enter a name for the user > Access type: Programmatic access > *Next: permissions* > Add user to Group > *Next* until the end > *create user*
+    - Download the CSV file from the success page > click *Close*
+
+- In Gitpod > In the terminal install boto3 and django-storages > *settings.py* > Add django-storages to installed apps under crispy forms
+    - `pip3 install boto3`
+    - `pip3 install django-storages`
+    - freeze to requirements.txt
+
+- Connect django to S3
+    - In *settings.py* > add the following code:
+    ```
+    if 'USE_AWS' in os.enviorn:
+        AWS_STORAGE_BUCKET_NAME = '[bucket name]'
+        AWS_S3_REGION_NAME = '[region]'
+        AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+        AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+        AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+
+        STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+        STATICFILES_LOCATION = 'static'
+        DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+        MEDIAFILES_LOCATION = 'media'
+
+
+        STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+        MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+    ```
+    - Go to heroku > *Settings* > *Config Vars* > Add the configurations for above (Details are found in the CSV file)
+    -   
 
 - In Heroku under the setting tab > Config vars > show config vars,  add your variables:
     - DATABASE_URL - Should already by provided by Postgress
