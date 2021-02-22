@@ -187,8 +187,16 @@ else:
 
 - In the terminal run `heroku login -i` and login to your heroku account through the terminal
 
-- In the terminal run `heroku config:set DISABLE_COLLECTSTATIC=1`
+- In the terminal run `heroku config:set DISABLE_COLLECTSTATIC=1 --app [heroku app name]`
+    - my app name is "operation-gym"
     - this is to prevent heroku from collecting static files
+
+- In *settings.py* > *ALLOWED_HOSTS* > add the heroku app url and local host:
+    - `ALLOWED_HOSTS = ['operation-gym.herokuapp.com', 'localhost']`
+
+- Push code to Heroku
+    - Add and commit using git
+    - Then `git push heroku master`
 
 - In Heroku under the setting tab > Config vars > show config vars,  add your variables:
     - DATABASE_URL - Should already by provided by Postgress
