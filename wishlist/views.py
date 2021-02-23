@@ -38,7 +38,7 @@ def wishlist(request):
 
 @login_required
 def add_to_wishlist(request, product_id):
-    """ A view to delete a item in the Wishlist """
+    """ A view to add a item in the Wishlist """
     redirect_url = request.POST.get('redirect_url')
 
     user = get_object_or_404(UserProfile, user=request.user)
@@ -53,8 +53,8 @@ def add_to_wishlist(request, product_id):
             return redirect(redirect_url)
 
         else:
-            variable = WishlistItem(wishlist=wishlist_user, product=product, date_added=timezone.now())
-            variable.save()
+            added_item = WishlistItem(wishlist=wishlist_user, product=product, date_added=timezone.now())
+            added_item.save()
             messages.success(request, "Product added to your wishlist")
             return redirect(redirect_url)
     else:
@@ -64,6 +64,8 @@ def add_to_wishlist(request, product_id):
 
 @login_required
 def delete_from_wishlist(request, product_id):
+    """ A view to delete a item in the wishlist"""
+
     redirect_url = request.POST.get('redirect_url')
 
     user = get_object_or_404(UserProfile, user=request.user)

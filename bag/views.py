@@ -7,7 +7,7 @@ from products.models import Product
 
 
 def view_bag(request):
-    """ A vie to return the shopping bag """
+    """ A view to return the shopping bag """
 
     return render(request, 'bag/bag.html')
 

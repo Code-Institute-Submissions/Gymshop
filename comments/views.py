@@ -11,6 +11,8 @@ from django.contrib import messages
 
 @login_required
 def add_comment(request, product_id):
+    """ A view to add a comment to a product """
+
     redirect_url = request.POST.get('redirect_url')
 
     product = Product.objects.get(pk=product_id)
@@ -34,6 +36,7 @@ def add_comment(request, product_id):
 
 @login_required
 def remove_comment(request, product_id):
+    """ A view to delete a comment """
     redirect_url = request.POST.get('redirect_url')
     if request.POST:
         user = UserProfile.objects.get(user=request.user)
