@@ -126,7 +126,7 @@ WSGI_APPLICATION = 'Gymshop.wsgi.application'
 
 if "DATABASE_URL" in os.environ:
     DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 else:
     DATABASES = {
@@ -185,7 +185,7 @@ if 'USE_AWS' in os.environ:
         'Expires': 'Fri, 11 Feb 2033 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
-    
+
     AWS_STORAGE_BUCKET_NAME = 'operation-gym'
     AWS_S3_REGION_NAME = 'eu-central-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
