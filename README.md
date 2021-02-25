@@ -31,9 +31,10 @@ Due to my persistance in having long UX designs I have decided to compress it as
 It contains all the written documentation for the User stories, Strategy Plane, Scope Plane, Structure Plane and skeleton Plane.
 From here on forwards I will continue with the surface Plane.
 
-Here are the two wire-frames I have decided to go with.
-- [Desktop view](Readme_sourceFiles/DesktopWireframe.pdf)
-- [Mobile & Tablet view](Readme_sourceFiles/MobileAndTabletView.pdf)
+Here are the wire frames I designed:
+- [Landing page and prodict view](Readme_sourceFiles/Landing-page-and-products.pdf)
+- [Wishlist and shopping page view](Readme_sourceFiles/Wishlist-and-bag-view.pdf)
+- [Admin view](Readme_sourceFiles/admin-view.pdf)
 
 I decided that for my colour scheme I want to stick to a black and white pallet. I want elements to look crispy and sharp.
 
@@ -299,5 +300,5 @@ For this I used Gitpod to deploy my project.
 - landing page inspired by [Uber](https://www.uber.com/za/en/s/r/?ad_id=480478681398&adg_id=116208467707&campaign_id=11623286126&cre=480478681398&dev=c&dev_m=&fi_id=&gclid=Cj0KCQiAj9iBBhCJARIsAE9qRtBXUQF4YSrnZO-tca0LJJa6-Cy0geBgyKTriXhnVYtnRS4wohH8ch4aAgl1EALw_wcB&gclsrc=aw.ds&kw=uber&kwid=kwd-169801042&match=e&net=g&placement=&tar=&utm_campaign=CM2062787-search-google-brand_161_-99_ZA-National_rider_web_acq_cpc_en_Brand_exact_uber_kwd-169801042_480478681398_116208467707_e_c&utm_source=AdWords_Brand)
 - I got the inspiration to make this project as I used some of the styling and functionality applied on it from code institute "Project - [Boutique Ado](https://github.com/KeisGSmit/OnlineShop)"
 - The business Logic was inspired by [Gymshark](https://eu.gymshark.com/)
-- the tutors at conde institute - [Igor](https://github.com/bravoalpha79), [Miklos](https://github.com/Sarosim), Johann Alberts, Stephen, Kevin
+- The tutors at conde institute - [Igor](https://github.com/bravoalpha79), [Miklos](https://github.com/Sarosim), Johann Alberts, Stephen, Kevin, [Tim](https://github.com/TravelTimN)
 - [DickV](https://github.com/dickvla)(mentor)

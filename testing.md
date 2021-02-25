@@ -27,8 +27,14 @@ I had to fall back on my old-school technique of manuall testing everything.
 ### Registration
 - A new user opens the site
 - Clicking on "My Account" > Register - takes the user to the registration form
+
+![registration Page](Readme_sourceFiles/Test_Images/Register-page.png)
+
 - Filling out the form and submitting it sends a email to the user
 - Clicking on the link in the email takes the user to the sign in page where they sign in
+
+![sign-in page](Readme_sourceFiles/Test_Images/Sign-in.png)
+
 - Sign in is successful with the registered details
 
 #### Forcing URLS
@@ -48,6 +54,9 @@ I had to fall back on my old-school technique of manuall testing everything.
 - Opening a product details page and clicking on add to bag adds a product to the cookie created
     - The user is able to select the amount of that item (quantity)
     - The user is unable to add more than what is in stock
+
+![Added product to bag](Readme_sourceFiles/Test_Images/added_product.png)
+
 - Clicking on the bag icon then takes the user to the page where they can view their bag and make modifications
 
 
@@ -59,8 +68,14 @@ I had to fall back on my old-school technique of manuall testing everything.
         messages.error(request, "No such URL exists")
         return render(request, 'home/index.html')
 ```
+
+![Result of forcing URLS](Readme_sourceFiles/Test_Images/bag_add_force.png)
+
 ## Modifying the bag
 - A user (new/old) has items in their bag and is at the page where they view their bag
+
+![Bag view](Readme_sourceFiles/Test_Images/bag_view.png)
+
 - Items are displayed in a table
 - Modifications occur under the *Qty* table heading
 - Changing the quantity and clicking on "Update" will update the quantity (can't go higher than 99 and lower than 0 - via the buttons)
@@ -68,6 +83,8 @@ I had to fall back on my old-school technique of manuall testing everything.
 - Clicking on "Delete" will remove a item from the bag
 - Setting the quantity to 0 or lower (manually) and clicking update will remove that item from the bag
 - If all items have been removed then text saying "Your bag is empty" will appear
+
+![empty bag view](Readme_sourceFiles/Test_Images/empty_bag.png)
 
 ### Forcing URLs
 - After the modifications in [Adding product to the bag](#Adding-product-to-the-bag) users are unable to force URLs
@@ -78,13 +95,19 @@ I had to fall back on my old-school technique of manuall testing everything.
 - The Add to Wishlist button is available on the products page or the product's details page. 
 - A user is unable to add produts through forcing URLs and will be redirected to the home page with a error message
 
+![Product with wishlist button](Readme_sourceFiles/Test_Images/wishlist_button.png)
+
+![Forcing add to wishlist URL](Readme_sourceFiles/Test_Images/Wishlist_force.png)
+
 ## Modifying Wishlist
 - To access this feature a user must be logged in. Forcing URLS (not logged in) will result in a Sign in page appearing.
-- If a user is signed in and is forcing urls like `/wishlist/add/7` or `/wishlist/delete/2` results in a redirect to the homepage with a error message
+- If a user is signed in and is forcing urls like `/wishlist/add/7` or `/wishlist/delete/2` results in a redirect to the homepage with a error message, as in the above image
 - Going to the wishlist with no items in the wishlist displays text saying 'Your wishlist is empty'
 - Going to the wishlist (with items in wishlist) will display each item in a table
 - On the far right there is a button "Remove from Wishlist"
 - Clicking that button removes the item from the user's wishlist
+
+![wish list view](Readme_sourceFiles/Test_Images/wishlist_view.png)
 
 ### Purchasing items from the wishlist
 - If a user goes to their wishlist and has a item in their wihslist on the far right there is a button called "Add to bag"
@@ -99,6 +122,8 @@ I had to fall back on my old-school technique of manuall testing everything.
     - This is to prevent spam
 -  Only the user who posted the comment can delete it
 - Upon successful commenting, the page redirects user to the same product's details page and their comment is on display 
+
+![A successfully posted comment](Readme_sourceFiles/Test_Images/successful_comment.png)
 
 ## Deleting comments
 - As stated above:
@@ -119,6 +144,8 @@ I had to fall back on my old-school technique of manuall testing everything.
     - Looking at stripe - The order has been placed
     - Looking in the order form in the admin shows the order has been placed
 
+![Successfully checkedout](Readme_sourceFiles/Test_Images/checkout.png)
+
 - As a registered user
     - A user add's products to their bag.
     - The user clicks on their bag or "Go to secure checkout"
@@ -129,9 +156,14 @@ I had to fall back on my old-school technique of manuall testing everything.
     - Looking at stripe - The order has been placed
     - Looking in the order form in the admin shows the order has been placed
 
+
+![Receipt](Readme_sourceFiles/Test_Images/receipt.png)
+
 ### Failing checkouts
 - Once the checkout form has been submitted, the window is closed, to simulate a failure
 - Looking at stripe and the order admin the orders have been placed and stripe successfully proccessed the payment
+
+![Stripe and Order placed](Readme_sourceFiles/Test_Images/strip&order.png)
 
 ### Checkout Conflict
 - If two users order the last item at the exact same time nothing will happen
@@ -148,6 +180,8 @@ I had to fall back on my old-school technique of manuall testing everything.
 - Updating the delivery information and attempting to purchase a item will result in the updated delivery information being auto-completed
 - Clicking on the delivery history displays the order's receipt page
 
+![Profile View](Readme_sourceFiles/Test_Images/profile_view.png)
+
 ## Product Admin
 - Users need to be logged in as a superuser/admin to use this feature
 - Forcing the right URLS result in the user being redirected to the sign in page (anonymous user) or redirect to the home page with a error message (regular user)
@@ -159,16 +193,23 @@ I had to fall back on my old-school technique of manuall testing everything.
     - Editing a product results in the same form, as adding a product, being displayed but the product's details are auto-filled in
     - Clicking on Delete removes the product from the database
 
+![Editing or adding a product](Readme_sourceFiles/Test_Images/product_edit.png)
+
+
 ## Browsing products
 - Any user can browse products
 - A user can use the Nav bar to filter through products - clearance, resistance machines etc.
 - On the products page a user can filter results in ascending or descending order of: Price, Name and Category 
+
+![Filtered searching](Readme_sourceFiles/Test_Images/filtered_searching.png)
 
 ## Search functionality
 - In the top Nav bar is a search bar (any user can use it)
 - If a user enters a word in the search bar, the products name or description will be searched for that word
 - If a relavant word is not found, no products will be displayed and a search result will be displayed
 - If a relavant word is found, products will be displayed along with the number of search results
+
+![Search functionality](Readme_sourceFiles/Test_Images/search_functionality.png)
 
 ## Logout
 - Only a user that is logged in can use this
