@@ -52,7 +52,6 @@ The simpler the layout the better, as it drives intuition and creates a sense of
     - By law the first person who buys the item, gets it. Thus only once a transaction is completed will the stock of the items be checked and be reduced by the quantity of that item.
     - if no stock is available then a user is unable to buy that product
 - All users are able to search & filter search for any product in the store
-- 
 
 ## Features Left to Implement
 
