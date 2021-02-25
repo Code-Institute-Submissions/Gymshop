@@ -1,7 +1,7 @@
 Initially this would have been the first project I wanted to use Unit tests to do my testing for me.
-Unfortunatly my coding abilities for production are better than my coding abilities for testing.
+Unfortunately my coding abilities for production are better than my coding abilities for testing.
 
-I had to fall back on my old-school technique of manuall testing everything. 
+I had to fall back on my old-school technique of manual testing everything. 
 
 ---  
 # Content
@@ -9,8 +9,8 @@ I had to fall back on my old-school technique of manuall testing everything.
     - [Login / Registration](#Login/Registration)
     - [Adding product to the bag](#Adding-product-to-the-bag)
     - [Modifying the bag](#Modifying-the-bag)
-    - [Adding product to wishlist](#Adding-product-to-wishlist)
-    - [Modifying Wishlist](#Modifying-Wishlist)
+    - [Adding product to wish list](#Adding-product-to-wish-list)
+    - [Modifying Wish list](#Modifying-Wish-list)
     - [Commenting on products](#Commenting-on-products)
     - [Deleting comments](#Deleting-comments)
     - [Checkout](#Checkout)
@@ -59,7 +59,6 @@ I had to fall back on my old-school technique of manuall testing everything.
 
 - Clicking on the bag icon then takes the user to the page where they can view their bag and make modifications
 
-
 ### Forcing URLs
 - Forcing a URL like `bag/add/2` creates a TypeError without submitting a form
 - To prevent such things from happening: This code has been implemented in bag/views.py to handle `GET` requests to URLs which users are not supposed to visit
@@ -89,36 +88,36 @@ I had to fall back on my old-school technique of manuall testing everything.
 ### Forcing URLs
 - After the modifications in [Adding product to the bag](#Adding-product-to-the-bag) users are unable to force URLs
 
-## Adding product to wishlist
+## Adding product to wish list
 - To access this feature a user must be logged in. Forcing URLS (not logged in) will result in a Sign in page appearing
-- A signed in user can add a product to their wishlist by clicking "Add to wishlist" - a success message will appear saying that the item has been added to their wishlist
+- A signed in user can add a product to their wish list by clicking "Add to wishlist" - a success message will appear saying that the item has been added to their wish list
 - The Add to Wishlist button is available on the products page or the product's details page. 
 - A user is unable to add produts through forcing URLs and will be redirected to the home page with a error message
 
-![Product with wishlist button](Readme_sourceFiles/Test_Images/wishlist_button.png)
+![Product with wish list button](Readme_sourceFiles/Test_Images/wishlist_button.png)
 
-![Forcing add to wishlist URL](Readme_sourceFiles/Test_Images/Wishlist_force.png)
+![Forcing add to wish list URL](Readme_sourceFiles/Test_Images/Wishlist_force.png)
 
-## Modifying Wishlist
+## Modifying Wish list
 - To access this feature a user must be logged in. Forcing URLS (not logged in) will result in a Sign in page appearing.
 - If a user is signed in and is forcing urls like `/wishlist/add/7` or `/wishlist/delete/2` results in a redirect to the homepage with a error message, as in the above image
-- Going to the wishlist with no items in the wishlist displays text saying 'Your wishlist is empty'
-- Going to the wishlist (with items in wishlist) will display each item in a table
-- On the far right there is a button "Remove from Wishlist"
-- Clicking that button removes the item from the user's wishlist
+- Going to the wish list with no items in the wish list displays text saying 'Your wish list is empty'
+- Going to the wish list (with items in wish list) will display each item in a table
+- On the far right there is a button "Remove from Wish list"
+- Clicking that button removes the item from the user's wish list
 
 ![wish list view](Readme_sourceFiles/Test_Images/wishlist_view.png)
 
-### Purchasing items from the wishlist
-- If a user goes to their wishlist and has a item in their wihslist on the far right there is a button called "Add to bag"
+### Purchasing items from the wish list
+- If a user goes to their wish list and has a item in their wish list on the far right there is a button called "Add to bag"
 - Clicking that button will take a user to that product's product details page where the user can add it to their bag
-- Upon purchasing the item, it will remain inside the wishlist
+- Upon purchasing the item, it will remain inside the wish list
 
 ## Commenting on products
 - Users need to be logged in to use this feature
-- Forcing urls like `comment/add/7` results in a redirect and a error message
+- Forcing urls like `comment/add/7` results in a redirect and an error message
 - A user will have to go to the product's details page to post a comment
-- Commenting more than once is not possible - users must delete their old comment abd re-comment
+- Commenting more than once is not possible - users must delete their old comment and re-comment
     - This is to prevent spam
 -  Only the user who posted the comment can delete it
 - Upon successful commenting, the page redirects user to the same product's details page and their comment is on display 
@@ -130,12 +129,12 @@ I had to fall back on my old-school technique of manuall testing everything.
     - Users need to be logged in to use this feature
     - Forcing urls like `comment/delete/7` results in a redirect and a error message
     - Only the user who posted the comment can delete it
-- Each comment posted by a user has a red button at the top of it's card with trash icon.
+- Each comment posted by a user has a red button at the top of its card with trash icon.
 - Clicking on it will redirect a user to the product's details page and their comment won't be present
 
 ## Checkout, Stripe and webhooks
 - As a anonymous user
-    - A user add's products to their bag.
+    - A user adds products to their bag.
     - The user clicks on their bag or "Go to secure checkout"
     - They are at their bag view > clicking on secure checkout should take the user to the form where they submit their delivery and card details 
         - No items in the bag results in them being unable to click the checkout button
@@ -144,10 +143,10 @@ I had to fall back on my old-school technique of manuall testing everything.
     - Looking at stripe - The order has been placed
     - Looking in the order form in the admin shows the order has been placed
 
-![Successfully checkedout](Readme_sourceFiles/Test_Images/checkout.png)
+![Successfully checked out](Readme_sourceFiles/Test_Images/checkout.png)
 
 - As a registered user
-    - A user add's products to their bag.
+    - A user adds products to their bag.
     - The user clicks on their bag or "Go to secure checkout"
     - They are at their bag view > clicking on secure checkout should take the user to the form where they submit their delivery and card details 
         - No items in the bag results in them being unable to click the checkout button
@@ -156,20 +155,19 @@ I had to fall back on my old-school technique of manuall testing everything.
     - Looking at stripe - The order has been placed
     - Looking in the order form in the admin shows the order has been placed
 
-
 ![Receipt](Readme_sourceFiles/Test_Images/receipt.png)
 
 ### Failing checkouts
 - Once the checkout form has been submitted, the window is closed, to simulate a failure
-- Looking at stripe and the order admin the orders have been placed and stripe successfully proccessed the payment
+- Looking at stripe and the order admin the orders have been placed and stripe successfully processed the payment
 
 ![Stripe and Order placed](Readme_sourceFiles/Test_Images/strip&order.png)
 
 ### Checkout Conflict
 - If two users order the last item at the exact same time nothing will happen
-- The user Who checks out first (successfully) will modify the stock 
+- The user who checks out first (successfully) will modify the stock 
 - When the second wants to checkout their stock is checked
-- If the remaining stock is less than 0 then a error will apear telling them which item has run out of stock
+- If the remaining stock is less than 0 then an error will appear telling them which item has run out of stock
 - The second user will not be able to checkout until they modify their bag
 - After the modifications the second user is able to checkout
 
@@ -186,15 +184,14 @@ I had to fall back on my old-school technique of manuall testing everything.
 - Users need to be logged in as a superuser/admin to use this feature
 - Forcing the right URLS result in the user being redirected to the sign in page (anonymous user) or redirect to the home page with a error message (regular user)
 - Clicking on "Product Management" allows the admin to add a product - filling out the form creates a new product
-    - The price and stock can not be negative
-    - The price can not have more than 6 figures
+    - The price and stock cannot be negative
+    - The price cannot have more than 6 figures
     - The user will be redirected to that product's details page
 - On the products page or product's details page the admin can edit or delete products
     - Editing a product results in the same form, as adding a product, being displayed but the product's details are auto-filled in
     - Clicking on Delete removes the product from the database
 
 ![Editing or adding a product](Readme_sourceFiles/Test_Images/product_edit.png)
-
 
 ## Browsing products
 - Any user can browse products
@@ -206,8 +203,8 @@ I had to fall back on my old-school technique of manuall testing everything.
 ## Search functionality
 - In the top Nav bar is a search bar (any user can use it)
 - If a user enters a word in the search bar, the products name or description will be searched for that word
-- If a relavant word is not found, no products will be displayed and a search result will be displayed
-- If a relavant word is found, products will be displayed along with the number of search results
+- If a relevant word is not found, no products will be displayed and a search result will be displayed
+- If a relevant word is found, products will be displayed along with the number of search results
 
 ![Search functionality](Readme_sourceFiles/Test_Images/search_functionality.png)
 
@@ -217,4 +214,5 @@ I had to fall back on my old-school technique of manuall testing everything.
 - This takes users to a sign out page where they can click "Cancel" or "Sign Out"
 - Clicking cancel redirects the user to the home page and they are still logged in
 - Clicking sign out redirects the user to the homepage and they are logged out.
+
 

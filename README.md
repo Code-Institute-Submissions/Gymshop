@@ -27,13 +27,13 @@
  
 # UX
 
-Due to my persistance in having long UX designs I have decided to compress it as a pdf [here](Readme_sourceFiles/UXdesign-final.pdf).
+Due to my persistence in having long UX designs I have decided to compress it as a pdf [here](Readme_sourceFiles/UXdesign-final.pdf).
 It contains all the written documentation for the User stories, Strategy Plane, Scope Plane, Structure Plane and skeleton Plane.
 From here on forwards I will continue with the surface Plane.
 
 Here are the wire frames I designed:
-- [Landing page and prodict view](Readme_sourceFiles/Landing-page-and-products.pdf)
-- [Wishlist and shopping page view](Readme_sourceFiles/Wishlist-and-bag-view.pdf)
+- [Landing page and product view](Readme_sourceFiles/Landing-page-and-products.pdf)
+- [Wish list and shopping page view](Readme_sourceFiles/Wishlist-and-bag-view.pdf)
 - [Admin view](Readme_sourceFiles/admin-view.pdf)
 
 I decided that for my colour scheme I want to stick to a black and white pallet. I want elements to look crispy and sharp.
@@ -43,13 +43,13 @@ The simpler the layout the better, as it drives intuition and creates a sense of
 # Features
  
 ## Existing Features
-- Registered shoppers have accounts to store their delivery information, see their order history, add products to their wish list and comment
+- Registered shoppers have accounts to store their delivery information, see their order history, and add products to their wish list and comment
 - Regular shoppers are able to purchase products just like registered users but do not have the same benefits
 - The site owner is able to add, edit and delete products from the store.
     - If a product is uploaded without an image then a default image is provided
 - Each product has a name, SKU, category, description, stock and image.
 - Due to the low traffic and high number of products at the current stage, having 2 users order the last product at the exact same time, is unlikely but I added some defensive programming for that:
-    - By law the first person who buys the item, gets it. Thus only once a transaction is completed will the stock of the items be ckecked and be reduced by the quantity of that item.
+    - By law the first person who buys the item, gets it. Thus only once a transaction is completed will the stock of the items be checked and be reduced by the quantity of that item.
     - if no stock is available then a user is unable to buy that product
 - All users are able to search & filter search for any product in the store
 - 
@@ -72,7 +72,7 @@ The simpler the layout the better, as it drives intuition and creates a sense of
 ### Tools
 
 - [Autoprefixer](https://autoprefixer.github.io/)
-- [Markup Validation service](https://validator.w3.org/)
+- [Mark-up Validation service](https://validator.w3.org/)
 - [Pep8 online check](http://pep8online.com/)
 - [GitHub](https://github.com/)
 - [Git](https://git-scm.com/)
@@ -90,7 +90,7 @@ The simpler the layout the better, as it drives intuition and creates a sense of
 - [Font Awesome icons](https://fontawesome.com/icons?d=gallery)
 - [Django](https://www.djangoproject.com/)
 
-The following are dependancies imported from the cheese shop (They can be found in requirements.txt). 
+The following are dependencies imported from the cheese shop (They can be found in requirements.txt). 
 - [asgiref==3.3.1](https://pypi.org/project/asgiref/)
 - [boto3==1.17.12](https://pypi.org/project/boto3/)
 - [botocore==1.20.12](https://pypi.org/project/botocore/)
@@ -128,9 +128,9 @@ Link to the live page: https://operation-gym.herokuapp.com/
 
 For this I used Gitpod to deploy my project.
 
-- First create a [heroku](https://dashboard.heroku.com/apps) account and create a app - The name is up to you: mine was operation-gym. Select a region closest to you - mine was europe
+- First create a [heroku](https://dashboard.heroku.com/apps) account and create a app - The name is up to you: mine was operation-gym. Select a region closest to you - mine was Europe
 - This assumes you already have a Stripe account. if not create one [here](https://stripe.com/)
-- In heroku, under *resources tab* > *Add-ons*, search for postgress and add it. Select Hobby-Dev as your plan - should be free
+- In heroku, under *resources tab* > *Add-ons*, search for postgress and add it. Select Hobby-Dev. as your plan - should be free
     - Go to settings and ensure there is a variable called "DATABASE_URL"
 
 - Product data needs to be imported
@@ -142,11 +142,11 @@ For this I used Gitpod to deploy my project.
     - follow the prompt in the terminal to create the superuser
 
 - Create a Procfile for heroku
-    - the context of the file should be `web: gunicorn [Main app].wsgi:application` - my main app is Gymshop
+    - The context of the file should be `web: gunicorn [Main app].wsgi:application` - my main app is Gymshop
 
 - In the terminal run `heroku login -i` and login to your heroku account through the terminal
 
-- In *settings.py* > *ALLOWED_HOSTS* > add the heroku app url and local host:
+- In *settings.py* > *ALLOWED_HOSTS* > add the heroku app URL and local host:
     - `ALLOWED_HOSTS = ['[heroku app name].herokuapp.com', 'localhost']`
 
 - Push code to Heroku - Note static files are not visible
@@ -155,7 +155,7 @@ For this I used Gitpod to deploy my project.
     - Add and commit using git
     - Then `git push heroku master`
 
-- set up automatic deploys in heroku
+- Set up automatic deploys in heroku
     - *Deploy* tab > *Deployment method* > Github > Search for the repository > Enable automatic deploys > master branch
 
 - Set up a AWS account and initialise S3
@@ -163,7 +163,7 @@ For this I used Gitpod to deploy my project.
     - *My Account* > *AWS management console* >  Look for S3 - under recently visited service, the search bar or the *find services* search bar
     - *Create bucket* > Enter bucket name and region - name should be the same as heroku and region should be closest to you > Disable "Block public access"
     - Acknowledge the bucket is public > *Create bucket* > Click on the bucket's hyperlink > *Properties* tab
-    - Scroll down to *Static Website Hosting* > *Edit* > *Static Website Hosting* - enable > *Hosting Type* - Host a static website > Fill out defualt values > *Save*
+    - Scroll down to *Static Website Hosting* > *Edit* > *Static Website Hosting* - enable > *Hosting Type* - Host a static website > Fill out default values > *Save*
     - *Permissions* tab > *CORS* configuration > add the following code and save:
         ```
         [
@@ -192,7 +192,7 @@ For this I used Gitpod to deploy my project.
     - *Permissions* tab > *ACL* > *Public access* > Tick "List" under the objects column
     - In the top Nav under *Services* > *IAM* > *Groups* > *Create new group* > name : *manage-operation-gym* > *Next step* > *Next step* > *Create group*
     - In the side Nav click *Policies* > *Create Policy* > *JSON* tab > *Import managed Policy* > search for: "AmazonS3FullAccess" > *import*
-    - Create a list ([]) at the resource value and paste the ARN twice and append `/*` to the end of the second ARN (both are strings so "" is needed and need to be comma seperated)
+    - Create a list ([]) at the resource value and paste the ARN twice and append `/*` to the end of the second ARN (both are strings so "" is needed and need to be comma separated)
         - `["ARN", "ARN/*"]`
     - *Next: tags* > *Next: Review* > provide name and description > *Create Policy*
     - Side Nav, click on *Groups* > *manage-operation-gym* > *Permissions* tab > *Attach Policy* > search and select the policy that was created > Attach Policy
@@ -213,13 +213,13 @@ For this I used Gitpod to deploy my project.
     - Go to the S3 bucket > *Create folder* > name it media > upload the content of the media file > Set ACL public access to "read" in the objects column
 
 - Create email functionality
-    - In Gmail (due to it's simplicity) got to *Settings* > *See all settings* > *Accounts and import* > *Other google account settings*
+    - In Gmail (due to its simplicity) got to *Settings* > *See all settings* > *Accounts and import* > *other Google account settings*
     - A new tab will open. In the side nav, click *Security* > turn on *2 step verification* > *App Passwords* 
-    - "Select the app and device you want to generate the app password for" : *Other*
+    - "Select the app and device you want to generate the app password for" : *other*
     - Add a custom name > *Generate*
     - A window will appear with a key. Do not close this window. Copy the key to your clipboard
     - In the config vars of the heroku app create 2 variables:
-        - `EMAIL_HOST_PASS`: The key generated by gmail
+        - `EMAIL_HOST_PASS`: The key generated by Gmail
         - `EMAIL_HOST_USER`: your email address where the key was retrieved from 
 
 - In Heroku Config vars add your variables:
@@ -229,12 +229,12 @@ For this I used Gitpod to deploy my project.
     - STRIPE_PUBLIC_KEY - Provided by Stripe - "Publishable key" on Stripe dashboard
     - STRIPE_SECRET_KEY - Provided by Stripe - "Secret key" on Stripe dashboard 
     - STRIPE_WH_SECRET - Provided by Stripe - *Developers* > *Webhooks* > add an end point > select endpoint > *Signing secret*
-        - log in to stripe *Stripe* > Side Nav, click *Developers* > *Webhooks* > add endpoint >  the endpoint is `[URL of deployed site]/checkout/wh/` > *recieve all events* > *add endpoint*
-        - Send a test webhook if this is successful. Sometimes it is slow to proccess this and a 401 error will appear but if you wait a few minutes it should work
+        - log in to stripe *Stripe* > Side Nav, click *Developers* > *Webhooks* > add endpoint >  the endpoint is `[URL of deployed site]/checkout/wh/` > *receive all events* > *add endpoint*
+        - Send a test webhook if this is successful. Sometimes it is slow to process this and a 401 error will appear but if you wait a few minutes it should work
 
-- Login to the deployed site's admnin (`/admin`) with admin login details and then verify the admin account
+- Login to the deployed site's admin (`/admin`) with admin login details and then verify the admin account
 
-- Site is now fully Deployed and is 100% functional
+- Site is now fully deployed and is 100% functional
 
 ## Offline/Local Deployment
 
