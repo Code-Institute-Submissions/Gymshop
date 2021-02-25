@@ -17,9 +17,9 @@
     - [Online Deployment](#Online-deployment)
     - [Offline Deployment](#Offline/Local-Deployment)
 - [Credits](#Credits)
-    -[Content](#Content)
-    -[Media](#Media)
-    -[Acknowledgements](#Acknowledgements)
+    - [Content](#Content)
+    - [Media](#Media)
+    - [Acknowledgements](#Acknowledgements)
 <!--table end-->
 
 ![Mock-up](Readme_sourceFiles/mockup.png)
