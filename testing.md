@@ -1,7 +1,4 @@
-Initially this would have been the first project I wanted to use Unit tests to do my testing for me.
-Unfortunately my coding abilities for production are better than my coding abilities for testing.
-
-I had to fall back on my old-school technique of manual testing everything. 
+My initial plan was to use Unit Testing for the first time during my project work, in order to do the testing for me. However, given that my production coding abilities are stronger and more robust than my testing coding abilities, I decided that it would be much more appropriate to utilise the old-school technique of manual testing.
 
 ---  
 # Content
