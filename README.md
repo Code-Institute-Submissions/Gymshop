@@ -296,8 +296,8 @@ For this I used Gitpod to deploy my project.
 - [majority of the product images](https://www.fitandme.com/guide-gym-equipment-names-how-to-use/#tab-con-14)
 
 ## Acknowledgements
-- landing page inspired by [Uber](https://www.uber.com/za/en/s/r/?ad_id=480478681398&adg_id=116208467707&campaign_id=11623286126&cre=480478681398&dev=c&dev_m=&fi_id=&gclid=Cj0KCQiAj9iBBhCJARIsAE9qRtBXUQF4YSrnZO-tca0LJJa6-Cy0geBgyKTriXhnVYtnRS4wohH8ch4aAgl1EALw_wcB&gclsrc=aw.ds&kw=uber&kwid=kwd-169801042&match=e&net=g&placement=&tar=&utm_campaign=CM2062787-search-google-brand_161_-99_ZA-National_rider_web_acq_cpc_en_Brand_exact_uber_kwd-169801042_480478681398_116208467707_e_c&utm_source=AdWords_Brand)
+- Landing page inspired by [Uber](https://www.uber.com/za/en/s/r/?ad_id=480478681398&adg_id=116208467707&campaign_id=11623286126&cre=480478681398&dev=c&dev_m=&fi_id=&gclid=Cj0KCQiAj9iBBhCJARIsAE9qRtBXUQF4YSrnZO-tca0LJJa6-Cy0geBgyKTriXhnVYtnRS4wohH8ch4aAgl1EALw_wcB&gclsrc=aw.ds&kw=uber&kwid=kwd-169801042&match=e&net=g&placement=&tar=&utm_campaign=CM2062787-search-google-brand_161_-99_ZA-National_rider_web_acq_cpc_en_Brand_exact_uber_kwd-169801042_480478681398_116208467707_e_c&utm_source=AdWords_Brand)
 - I got the inspiration to make this project as I used some of the styling and functionality applied on it from code institute "Project - [Boutique Ado](https://github.com/KeisGSmit/OnlineShop)"
 - The business Logic was inspired by [Gymshark](https://eu.gymshark.com/)
-- The tutors at conde institute - [Igor](https://github.com/bravoalpha79), [Miklos](https://github.com/Sarosim), Johann Alberts, Stephen, Kevin, [Tim](https://github.com/TravelTimN)
+- The tutors at conde institute - [Igor](https://github.com/bravoalpha79), [Miklos](https://github.com/Sarosim), Johann Alberts, Stephen, Kevin, [Tim](https://github.com/TravelTimN), Cormac, Alan.
 - [DickV](https://github.com/dickvla)(mentor)
